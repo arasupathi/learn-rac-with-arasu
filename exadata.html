@@ -132,6 +132,52 @@ th{font:600 11px/1.3 var(--mono);letter-spacing:.08em;text-transform:uppercase;c
 .kpi{border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:#fff}
 .kpi b{display:block;font:700 24px/1 var(--display)} .kpi span{font:500 11px/1.3 var(--mono);color:var(--mute);text-transform:uppercase;letter-spacing:.08em}
 .err{color:var(--bad);font-size:13px;min-height:18px}
+.theory .thead{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin:0 0 10px}
+.theory .thead h2{margin:0}
+.theory .thead .btn{margin-left:auto}
+.theory details{border:1px solid var(--line);border-radius:12px;background:var(--panel);margin-bottom:10px}
+.theory details[open]{border-color:var(--line2)}
+.theory summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:12px 16px;font:700 17px/1.2 var(--display);letter-spacing:.02em}
+.theory summary::-webkit-details-marker{display:none}
+.theory summary::before{content:"+";display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--black);color:#fff;font:600 14px/1 var(--mono);flex:0 0 auto}
+.theory details[open] summary::before{content:"–"}
+.theory summary .lv{font:600 10.5px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;padding:4px 7px;border-radius:6px;background:#eef3fb;color:var(--accent)}
+.theory summary .lv.l2{background:#f1ecf8;color:#5b3e8c} .theory summary .lv.l3{background:#fde5e2;color:var(--bad)}
+.theory summary .src{font:600 10.5px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;padding:4px 7px;border-radius:6px;margin-left:auto}
+.theory summary .src.doc{background:var(--okbg);color:var(--ok)} .theory summary .src.field{background:var(--warnbg);color:var(--warn)}
+.theory .tbody{padding:0 16px 16px;border-top:1px solid var(--line)}
+.theory .tbody>*:first-child{margin-top:12px}
+.theory .tbody h3{margin:16px 0 6px;font-size:16px}
+.theory .tbody ul,.theory .tbody ol{padding-left:22px} .theory .tbody li{margin-bottom:6px}
+.theory .tbody pre{background:#0f1215;color:#d6dde3;border-radius:10px;padding:10px 12px;font:400 12px/1.55 var(--mono);overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere;margin:0 0 6px}
+.theory .tbody .lbl{font:600 11px/1.3 var(--mono);color:var(--mute);letter-spacing:.12em;text-transform:uppercase;margin:12px 0 6px}
+.theory .tbody code{font:500 12.5px var(--mono);background:#eef1f4;padding:1px 5px;border-radius:4px}
+.theory .tbody pre code{background:none;padding:0}
+
+.search{position:relative;margin:0 0 14px}
+.search input{width:100%;font:500 14px/1.2 var(--body);padding:10px 12px 10px 38px;border:1px solid var(--line2);border-radius:10px;background:var(--panel) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235a6470' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='m20 20-3.5-3.5'/%3E%3C/svg%3E") 12px center/16px no-repeat;color:var(--ink)}
+.search input:focus{outline:2px solid var(--accent);outline-offset:1px}
+#qres{position:absolute;left:0;right:0;top:calc(100% + 6px);z-index:20;background:var(--panel);border:1px solid var(--line2);border-radius:12px;box-shadow:0 12px 32px rgba(17,20,24,.14);max-height:min(60vh,520px);overflow-y:auto;padding:6px}
+#qres .qh{font:500 11.5px var(--mono);color:var(--mute);padding:6px 10px}
+#qres .qr{display:grid;grid-template-columns:auto auto 1fr;gap:4px 10px;align-items:baseline;width:100%;text-align:left;border:0;background:transparent;padding:8px 10px;border-radius:8px;cursor:pointer;font:400 13.5px/1.35 var(--body);color:var(--ink)}
+#qres .qr:hover,#qres .qr:focus{background:#eef3fb}
+#qres .qr b{font:700 14px/1.2 var(--display);letter-spacing:.02em}
+#qres .qr small{grid-column:1/-1;color:var(--mute);font-size:12.5px}
+#qres .qt{font:600 10px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:3px 6px;border-radius:5px;background:#eef1f4;color:var(--mute)}
+#qres .qt.part{background:var(--infobg);color:var(--info)} #qres .qt.theory{background:#f1ecf8;color:#5b3e8c} #qres .qt.scenario{background:var(--warnbg);color:var(--warn)}
+#qres .qtab{font:500 11px var(--mono);color:var(--mute)}
+#qres mark{background:#fff1a8;color:inherit;padding:0 1px;border-radius:2px}
+.cmdtoc{margin:0 0 14px} .cmdtoc .pill{text-decoration:none;cursor:pointer} .cmdtoc .pill:hover{border-color:var(--accent);color:var(--accent)}
+.cmdg{border:1px solid var(--line);border-radius:12px;background:var(--panel);margin-bottom:10px}
+.cmdg summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:10px;padding:12px 16px;font:700 17px/1.2 var(--display);letter-spacing:.02em}
+.cmdg summary::-webkit-details-marker{display:none}
+.cmdg summary .cnt{font:600 11px/1 var(--mono);color:var(--mute);border:1px solid var(--line2);border-radius:999px;padding:4px 8px}
+.cmdg summary .cp{margin-left:auto}
+.cmdl{padding:4px 16px 14px;border-top:1px solid var(--line);display:grid;gap:6px}
+.cmd{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:start}
+.cmd pre{margin:0;background:#0f1215;color:#d6dde3;border-radius:8px;padding:8px 10px;font:400 12px/1.5 var(--mono);white-space:pre-wrap;overflow-wrap:anywhere}
+.cmd pre i{color:#79d999;font-style:normal}
+.cmd a{font:500 11px/1.3 var(--mono);color:var(--accent);text-decoration:none;white-space:nowrap;padding-top:8px}
 footer{max-width:1520px;margin:28px auto 0;color:var(--mute);font-size:12.5px;border-top:1px solid var(--line);padding-top:12px}
 footer code{font:400 11.5px var(--mono)}
 @media (max-width:1000px){ .app{grid-template-columns:minmax(0,1fr)} .side{position:static;flex-direction:row;overflow-x:auto;padding:8px;max-height:none} .side .brand,.side .grpl,.side .back{display:none} .side button{flex:0 0 auto} }
@@ -154,12 +200,15 @@ footer code{font:400 11.5px var(--mono)}
   <button type="button" data-sec="ops" aria-pressed="false"><span class="n">8</span><span>Operations &amp; Failures</span></button>
   <button type="button" data-sec="brk" aria-pressed="false"><span class="n">9</span><span>Break the Rack</span></button>
   <button type="button" data-sec="lab" aria-pressed="false"><span class="n">10</span><span>Configuration Lab</span></button>
+  <button type="button" data-sec="migrate" aria-pressed="false"><span class="n">11</span><span>Moving to Exadata</span></button>
   <div class="grpl">Reference</div>
-  <button type="button" data-sec="rac2exa" aria-pressed="false"><span class="n">11</span><span>From RAC to Exadata</span></button>
-  <button type="button" data-sec="glossary" aria-pressed="false"><span class="n">12</span><span>Glossary</span></button>
+  <button type="button" data-sec="rac2exa" aria-pressed="false"><span class="n">12</span><span>From RAC to Exadata</span></button>
+  <button type="button" data-sec="cmds" aria-pressed="false"><span class="n">13</span><span>Commands</span></button>
+  <button type="button" data-sec="glossary" aria-pressed="false"><span class="n">14</span><span>Glossary</span></button>
   <div class="back"><a href="index.html">← Learn RAC with Arasu</a></div>
 </nav>
 <div class="wrap">
+  <div class="search"><input id="q" type="search" placeholder="Search parts, commands, scenarios, theory…  ( / )" autocomplete="off" spellcheck="false"><div id="qres" hidden></div></div>
   <div class="eyebrow" id="eyebrow">Oracle Exadata X11M · engineered system · digital twin</div>
   <h1 id="h1">Exadata Rack</h1>
   <p class="lede" id="lede">One rack, two kinds of servers, one RDMA fabric. Click any part.</p>
@@ -219,6 +268,7 @@ footer code{font:400 11.5px var(--mono)}
   </section>
 
   <section id="sec-doc" class="doc" style="margin-top:22px"></section>
+  <section id="sec-theory" class="doc theory" style="margin-top:22px"></section>
 </div>
 </div>
 <footer>Learn Exadata with Arasu · companion to <a href="index.html">Learn RAC with Arasu</a>. Hardware figures from Oracle's Exadata X11M component pages (Oracle Exadata System Software 25.1). Behaviour described as "field knowledge" is practitioner experience, not Oracle documentation. No corporate hostnames or addresses appear anywhere on this site.</footer>
@@ -342,10 +392,10 @@ cell:{
   variants:["HC","EF","XT"],
   parts:[
   {id:"cchassis",cat:"Hardware",name:"2U chassis — Exadata Server X11M",src:"doc",desc:"Two rack units, the same Exadata Server X11M (E6-2L) chassis as the database server, provisioned as a storage server. Front: twelve 3.5-inch bays (HC/XT) or NVMe flash bays (EF). Rear: PCIe flash cards, CX7 fabric adapter, two PSUs, admin and ILOM ports. The cell has no client network port — it is reachable only over RoCE (data) and the admin network (management).",cmd:"cellcli -e list cell detail\ndmidecode -s system-product-name"},
-  {id:"ccpu",cat:"Hardware",name:"CPUs — AMD EPYC 9J15",src:"doc",desc:"HC and EF: 2 × 32-core EPYC 9J15 at 2.95 GHz. XT: a single 9J15. These cores run cellsrv: predicate filtering, column projection, decompression of HCC units, storage index lookups. Cell CPU is not licensed as database CPU — this is why offload is free compute.",cmd:"cellcli -e list cell attributes cpuCount\ntop -b -n1 | grep cellsrv"},
+  {id:"ccpu",cat:"Hardware",name:"CPUs — AMD EPYC 9J15",src:"doc",desc:"HC and EF: 2 × 32-core EPYC 9J15 at 2.95 GHz. XT: a single 9J15 with 256 GB of memory. These cores run cellsrv: predicate filtering, column projection, decompression of HCC units, storage index lookups. Cell CPU is not licensed as database CPU — this is why offload is free compute.",cmd:"cellcli -e list cell attributes cpuCount\ntop -b -n1 | grep cellsrv"},
   {id:"cdimm",cat:"Hardware",name:"DDR5 + XRMEM",src:"doc",desc:"HC and EF: 1536 GB DDR5-6400 (24 × 64 GB) including up to 1.25 TB of Exadata RDMA Memory cache. XRMEM is plain DRAM that database servers read directly over RDMA, bypassing the cell CPU, at roughly 17 microseconds. XT cells have 256 GB and no XRMEM. HC-Z has 192 GB + 576 GB XRMEM.",cmd:"cellcli -e list xrmemcache detail\ncellcli -e list metriccurrent where name like 'XRM.*'\nfree -g"},
   {id:"hdd",cat:"Hardware",name:"12 × 22 TB HDD (HC / XT)",src:"doc",desc:"Twelve 7,200 rpm SAS disks, 264 TB raw per cell. The first two disks also hold a small system partition on older generations; X11M cells boot from separate NVMe. Each disk becomes one cell disk and is sliced into grid disks.",cmd:"cellcli -e list physicaldisk where diskType='HardDisk' attributes name,physicalSize,status,slotNumber\ncellcli -e list lun attributes name,deviceName,status",out:"CellCLI> list physicaldisk where diskType='HardDisk' attributes name,physicalSize,status,slotNumber\n         20:0     20.0092T    normal                 0\n         20:1     20.0092T    normal                 1\n         20:2     20.0092T    normal                 2\n         ...\n         20:7     20.0092T    predictive failure     7\n         ...\n         20:11    20.0092T    normal                 11\n-- 22 TB marketing = 20.0 TiB here. Slot 7 is about to be dropped from ASM automatically."},
-  {id:"flash",cat:"Hardware",name:"4 × 6.8 TB performance flash",src:"doc",desc:"Four NVMe performance-optimised flash devices (27.2 TB per cell) used for Exadata Smart Flash Cache and Smart Flash Log. On HC they also hold the columnar cache. On EF the same four cards cache in front of the capacity flash.",cmd:"cellcli -e list flashcache detail\ncellcli -e list flashlog detail\ncellcli -e list physicaldisk where diskType='FlashDisk' attributes name,physicalSize,status",out:"CellCLI> list flashcache detail\n         name:                   dm01cel01_FLASHCACHE\n         cellDisk:               FD_00_dm01cel01,FD_01_dm01cel01,FD_02_dm01cel01,FD_03_dm01cel01\n         creationTime:           2026-06-14T02:40:11+05:30\n         degradedCelldisks:\n         effectiveCacheSize:     23.49T\n         id:                     2c1f9a7e-0b4d-4e2a-9d3f-5e6a7b8c9d0e\n         size:                   23.49T\n         status:                 normal\nCellCLI> list flashlog detail\n         name:                   dm01cel01_FLASHLOG\n         effectiveSize:          512M\n         size:                   512M\n         status:                 normal"},
+  {id:"flash",cat:"Hardware",name:"4 × 6.8 TB performance flash",src:"doc",desc:"Four NVMe performance-optimised flash devices (27.2 TB per cell) used for Exadata Smart Flash Cache and Smart Flash Log. On HC they also hold the columnar cache. On EF the same four cards cache in front of the capacity flash. An XT cell has two of them (13.6 TB).",cmd:"cellcli -e list flashcache detail\ncellcli -e list flashlog detail\ncellcli -e list physicaldisk where diskType='FlashDisk' attributes name,physicalSize,status",out:"CellCLI> list flashcache detail\n         name:                   dm01cel01_FLASHCACHE\n         cellDisk:               FD_00_dm01cel01,FD_01_dm01cel01,FD_02_dm01cel01,FD_03_dm01cel01\n         creationTime:           2026-06-14T02:40:11+05:30\n         degradedCelldisks:\n         effectiveCacheSize:     23.49T\n         id:                     2c1f9a7e-0b4d-4e2a-9d3f-5e6a7b8c9d0e\n         size:                   23.49T\n         status:                 normal\nCellCLI> list flashlog detail\n         name:                   dm01cel01_FLASHLOG\n         effectiveSize:          512M\n         size:                   512M\n         status:                 normal"},
   {id:"capflash",cat:"Hardware",name:"4 × 30.72 TB capacity flash (EF)",src:"doc",desc:"Extreme Flash cells replace the twelve HDDs with four capacity-optimised NVMe devices (122.88 TB raw). These are the primary data storage; grid disks are carved from them exactly as from HDDs. There is no spinning media in an EF cell.",cmd:"cellcli -e list celldisk where diskType='FlashDisk' attributes name,size,status\ncellcli -e list griddisk attributes name,cellDisk,size"},
   {id:"sysnvme",cat:"Hardware",name:"2 × 480 GB NVMe (system)",src:"doc",desc:"Mirrored boot and system devices for the cell's Oracle Linux and Exadata System Software. Separating system from data disks means a data disk replacement never touches the OS.",cmd:"lsblk | head\ncellcli -e list cell attributes releaseVersion"},
   {id:"hba",cat:"Hardware",name:"Disk controller (HBA)",src:"doc",desc:"Host bus adapter for the twelve SAS disks. Exadata uses it in pass-through mode: ASM does the mirroring, not the controller. A failing HBA takes all twelve disks offline at once — one cell, one failure group, which is exactly what ASM redundancy expects.",cmd:"cellcli -e list physicaldisk attributes name,status,errorCount\n/opt/MegaRAID/storcli/storcli64 /c0 show   # path varies by controller"},
@@ -356,7 +406,7 @@ cell:{
   {id:"rs",cat:"Software",name:"Restart Server (RS)",src:"doc",desc:"The watchdog. RS monitors cellsrv and MS and restarts them if they die. If cellsrv crashes repeatedly RS stops trying and raises a critical alert.",cmd:"cellcli -e list cell attributes rsStatus\ncellcli -e alter cell restart services all"},
   {id:"cellcli",cat:"Software",name:"cellcli",src:"doc",desc:"The cell's command line: LIST / CREATE / ALTER / DROP on cell, celldisk, griddisk, flashcache, flashlog, xrmemcache, iormplan, metrics, alerts, quarantines. Run as celladmin for most things, root for services. dcli wraps it for fleet-wide use.",cmd:"cellcli -e list metricdefinition where objectType='CELL'\ncellcli -e list alerthistory where begintime > '2026-01-01T00:00:00' and severity in ('critical','warning')",out:"CellCLI> list alerthistory where severity in ('critical','warning') and examinedBy=''\n         12_1   2026-10-22T03:14:08+05:30   critical   \"Hard disk failed.  Status : CRITICAL  Model Number : H7322A  Size : 22TB  Serial Number : 2XXXXXXX  Slot Number : 7  Cell Disk : CD_07_dm01cel01  Grid Disk : DATA_CD_07_dm01cel01, RECO_CD_07_dm01cel01\"\n         13_1   2026-10-29T22:01:44+05:30   warning    \"Flash disk entered confinement. Status : WARNING - CONFINEDONLINE ... Slot Number : PCI Slot 7\"\nCellCLI> alter alerthistory all examinedBy='arasu'\nAlert 12_1 successfully altered\nAlert 13_1 successfully altered"},
   {id:"smartscan",cat:"Feature",name:"Smart Scan",src:"doc",desc:"For full table scans and fast full index scans against cell storage, the database sends the predicate, the projected columns and join filters to the cells. Each cell reads its blocks, filters and projects, and returns only matching rows and columns. Watch 'cell physical IO bytes eligible for predicate offload' against 'cell physical IO interconnect bytes returned by smart scan'.",cmd:"SELECT name,value/1024/1024/1024 gb FROM v$sysstat WHERE name IN ('cell physical IO bytes eligible for predicate offload','cell physical IO interconnect bytes returned by smart scan','cell physical IO bytes saved by storage index');\n-- Plan shows TABLE ACCESS STORAGE FULL with 'storage(...)' predicate"},
-  {id:"stidx",cat:"Feature",name:"Storage index",src:"doc",desc:"An in-memory (cell DRAM) min/max summary per column per 1 MB region, built automatically as Smart Scans run. Regions that cannot contain a matching row are skipped entirely. It is not persisted across cellsrv restarts (field: warm it with a scan after patching).",cmd:"SELECT value/1024/1024/1024 gb_saved FROM v$sysstat WHERE name='cell physical IO bytes saved by storage index';"},
+  {id:"stidx",cat:"Feature",name:"Storage index",src:"doc",desc:"An in-memory (cell DRAM) min/max summary per column per 1 MB region, built automatically as Smart Scans run. Regions that cannot contain a matching row are skipped entirely. Since Exadata System Software 21.2 storage indexes are persisted to disk and survive a cellsrv restart or reboot; on older releases they lived only in memory and were rebuilt by the next scans.",cmd:"SELECT value/1024/1024/1024 gb_saved FROM v$sysstat WHERE name='cell physical IO bytes saved by storage index';"},
   {id:"fcache",cat:"Feature",name:"Smart Flash Cache",src:"doc",desc:"Write-back cache on the performance flash. Hot blocks, OLTP reads and writes, and columnar-format copies of scanned data all live here. Objects can be pinned with CELL_FLASH_CACHE KEEP. On HC it turns disk-bound OLTP into flash-speed OLTP.",cmd:"cellcli -e list flashcache detail\ncellcli -e list flashcachecontent where dbUniqueName='<db>' attributes objectNumber,cachedKeepSize,cachedSize\ncellcli -e list metriccurrent where name like 'FC_.*'"},
   {id:"flog",cat:"Feature",name:"Smart Flash Log",src:"doc",desc:"Redo writes go to flash and disk in parallel; the cell acknowledges on the first to complete. Removes redo write latency outliers without a dedicated redo tier.",cmd:"cellcli -e list flashlog detail\ncellcli -e list metriccurrent where name like 'FL_.*'"},
   {id:"xrmem",cat:"Feature",name:"XRMEM cache",src:"doc",desc:"The hottest blocks are additionally cached in cell DRAM and read by database servers with RDMA, so the cell CPU is not involved: ~17 µs reads. Also used as a commit accelerator (XRMEM log) for redo. Replaces X8M/X9M persistent memory.",cmd:"cellcli -e list xrmemcache detail\ncellcli -e list xrmemlog detail\nSELECT name,value FROM v$sysstat WHERE name LIKE 'cell%RDMA%';",out:"CellCLI> list xrmemcache detail\n         name:                   dm01cel01_XRMEMCACHE\n         size:                   1.22T\n         status:                 normal\nCellCLI> list metriccurrent where name like 'XRM_IO_RQ_R_HIT.*'\n         XRM_IO_RQ_R_HIT          dm01cel01   184,220,117 IO requests\n         XRM_IO_RQ_R_HIT_SEC      dm01cel01   42,311 IO/sec"},
@@ -402,10 +452,10 @@ cell:{
 <tr><td>CPU</td><td>2 × 32-core EPYC 9J15</td><td>2 × 32-core EPYC 9J15</td><td>1 × 32-core EPYC 9J15</td></tr>
 <tr><td>Memory</td><td>1536 GB incl. up to 1.25 TB XRMEM</td><td>1536 GB incl. up to 1.25 TB XRMEM</td><td>256 GB, no XRMEM</td></tr>
 <tr><td>Primary storage</td><td>12 × 22 TB HDD (264 TB)</td><td>4 × 30.72 TB NVMe (122.88 TB)</td><td>12 × 22 TB HDD (264 TB)</td></tr>
-<tr><td>Performance flash</td><td>4 × 6.8 TB (27.2 TB)</td><td>4 × 6.8 TB (27.2 TB)</td><td>4 × 6.8 TB (27.2 TB)</td></tr>
+<tr><td>Performance flash</td><td>4 × 6.8 TB (27.2 TB)</td><td>4 × 6.8 TB (27.2 TB)</td><td>2 × 6.8 TB (13.6 TB)</td></tr>
 <tr><td>Typical use</td><td>Mixed OLTP and warehouse; the default</td><td>Latency-critical OLTP, heavy write workloads</td><td>Low-cost tier: archives, backups, dev/test; shareable by several clusters</td></tr>
 </tbody></table></div>
-<p class="note">Figures from Oracle's X11M component pages. HC-Z (half the disks, 192 GB + 576 GB XRMEM, one CPU) exists as an entry-level variant and is not modelled here.</p>
+<p class="note">Figures from Oracle's X11M component pages (Extended: 1 × 32-core EPYC 9J15, 256 GB, 12 × 22 TB HDD, 2 × 6.8 TB flash, 2 × 480 GB NVMe system, one dual-port CX7). HC-Z (half the disks, smaller memory and XRMEM, one CPU) exists as an entry-level variant and is not modelled here.</p>
 <h2>Why the cell is the product</h2>
 <p>Everything that makes Exadata faster than a RAC cluster on a SAN happens inside the cell: predicates evaluated next to the disks, a write-back flash cache that understands Oracle block types, redo acknowledged from flash, RDMA reads from DRAM, compression units unpacked by cell cores, and I/O priorities enforced per database. A database server on Exadata issues roughly the same I/O calls as on any storage; the cell decides what those calls cost.</p>`
 },
@@ -524,7 +574,7 @@ ops:{
   {id:"t_io",cat:"Triage",name:"Symptom: I/O latency spike",src:"field",desc:"Database reports cell single block physical read averages jumping from 0.3 ms to 5 ms+. Work from the widest question inward: whole rack, one cell, or one database? Then disks and flash on the suspect cell, then IORM, then the fabric. Most spikes are one cell's disk entering confinement or a flash card degrading; the second most common is IORM doing its job for a database that is not yours.",cmd:"# 1. Which cell? Per-cell-disk latency in microseconds per request\ndcli -g ~/cell_group -l celladmin \"cellcli -e list metriccurrent where name like 'CD_IO_TM_R_.*_RQ' and metricValue > 20000\"\n# 2. One cell -> disk and flash health, confinement, predictive failure\ncellcli -e list physicaldisk where status != 'normal' attributes name,status,errorCount\ncellcli -e list flashcache attributes name,status,degradedCelldisks\ncellcli -e list alerthistory where begintime > '<today>T00:00:00+05:30'\n# 3. Is IORM throttling the complaining database?\ncellcli -e list metriccurrent where name like 'DB_IO_WT_.*_RQ' and metricValue > 0\n# 4. Fabric: pause frames, discards, RDS retransmits on both ports\nfor i in clre0 clre1; do ethtool -S $i | grep -iE 'pause|discard|error'; done; grep -E 'retrans|dropped' /proc/net/rds/stats\n# 5. Cell CPU and flash hit ratio\ncellcli -e list metriccurrent CL_CPUT,FC_IO_BY_R_MISS,FC_IO_BY_R\n# 6. Database side: which SQL, which wait, which files\nSELECT event,ROUND(time_waited_micro/NULLIF(total_waits,0)/1000,2) avg_ms FROM v$system_event WHERE event LIKE 'cell%';\n# 7. Still nothing? ExaWatcher has per-second iostat for the last 7 days\nls /opt/oracle.ExaWatcher/archive/"},
   {id:"t_evict",cat:"Triage",name:"Symptom: node evicted (RoCE flavour)",src:"field",desc:"Same CSS mechanics as any RAC eviction, two Exadata twists: the heartbeat path is the RoCE fabric, and the voting files are grid disks on cells. So after ocssd.trc, look at both leaf ports on the evicted node, the RDS retransmit counters, and whether the cells saw the node disappear (cell alert.log 'client closed') before or after CSS did. A lost cable to one leaf never evicts on its own — if it did, the other port was already unhealthy.",cmd:"# 1. The verdict and the timeline\ngrep -E 'clssnmPollingThread|clssnmvDiskPing|evict|clssnmHandleSync' $ORACLE_BASE/diag/crs/$(hostname -s)/crs/trace/ocssd.trc | tail -40\n# 2. Was it network or disk heartbeat? (network: 'missed network heartbeat'; disk: 'voting file ... offline')\ncrsctl query css votedisk\n# 3. Both fabric ports on the evicted node, with timestamps from the kernel\ndmesg -T | grep -iE 'clre|re0|re1|mlx5|link' | tail -30\nfor i in clre0 clre1; do ethtool $i | grep 'Link detected'; ethtool -S $i | grep -iE 'link_down|discard'; done\n# 4. RDS and the other node's view\ncat /proc/net/rds/stats | grep -E 'retrans|conn_reset|dropped'\n# 5. What the cells saw and when\ndcli -g ~/cell_group -l celladmin 'grep -E \"client.*closed|connection reset\" /opt/oracle/cell/log/diag/asm/cell/*/trace/alert.log | tail -5'\n# 6. Switch side (NX-OS)\nshow logging last 100 | include 'Ethernet1/(8|9)'\n# 7. Then the usual: OS load, swap, hangs\nsar -q -s 02:00:00 -e 02:30:00; grep -i 'soft lockup\\|hung task' /var/log/messages"},
   {id:"t_cellsrv",cat:"Triage",name:"Symptom: cellsrv restarting",src:"field",desc:"RS restarting cellsrv once is self-healing; three times in an hour is a loop. The cell alert.log names the ORA-600/ORA-7445 and usually the SQL that triggered it; the quarantine that follows is the clue. Collect sundiag for Support before the incident directory ages out, and check whether the same SQL ID is now hitting the next cell.",cmd:"# 1. How often, and what reason\ncellcli -e list alerthistory where alertType='Stateless' and begintime > '<today>T00:00:00+05:30' attributes beginTime,severity,alertMessage\ngrep -E 'ORA-00600|ORA-07445|CELLSRV started' /opt/oracle/cell/log/diag/asm/cell/$(hostname -s)/trace/alert.log | tail -20\n# 2. The quarantine tells you the SQL and plan\ncellcli -e list quarantine attributes name,creationTime,quarantineType,sqlID,sqlPlanHashValue,dbUniqueName,crashReason\n# 3. Incident package for Support\nls -t /opt/oracle/cell/log/diag/asm/cell/$(hostname -s)/incident/ | head\n/opt/oracle.SupportTools/sundiag.sh snapshot\n# 4. Is the same SQL now crashing cell 2 and 3?\ndcli -g ~/cell_group -l celladmin 'cellcli -e list quarantine attributes sqlID,creationTime'\n# 5. Stop the bleeding on the database side while Support works\n-- ALTER SESSION SET cell_offload_processing=FALSE for that job, or a SQL patch with NO_CELL_OFFLOAD hint"},
-  {id:"t_postpatch",cat:"Triage",name:"Symptom: slower after patching",src:"field",desc:"Three honest explanations before suspecting the patch itself: storage indexes are rebuilt from scratch after cellsrv restarts (first scans are slower), flash cache was re-populated (hit ratio climbs back over hours), and a quarantine or changed default silently turned off something. Compare offload bytes before and after; a drop in 'eligible' bytes with the same workload is the signal.",cmd:"# 1. Did offload volume change for the same workload?\nSELECT name,value FROM v$sysstat WHERE name IN ('cell physical IO bytes eligible for predicate offload','cell physical IO bytes saved by storage index','cell flash cache read hits');\n# 2. Quarantines added by the patch's first crashes?\ndcli -g ~/cell_group -l celladmin 'cellcli -e list quarantine attributes name,creationTime,quarantineType'\n# 3. Flash cache warming: hit ratio trend\ncellcli -e list metrichistory where name='FC_IO_BY_R_MISS_SEC' and collectionTime > '<patch-time>' | tail -30\n# 4. Anything left offline or resyncing?\ndcli -g ~/cell_group -l celladmin \"cellcli -e list griddisk attributes name,asmmodestatus where asmmodestatus != 'ONLINE'\"\nSELECT * FROM v$asm_operation;\n# 5. Confirm every layer is on the version you think\ndcli -g ~/all_group -l root 'imageinfo -ver'; crsctl query crs activeversion -f; $ORACLE_HOME/OPatch/opatch lspatches\n# 6. Then AWR diff: ADDM compare before/after\n@?/rdbms/admin/awrddrpt.sql"},
+  {id:"t_postpatch",cat:"Triage",name:"Symptom: slower after patching",src:"field",desc:"Three honest explanations before suspecting the patch itself: on releases before 21.2 storage indexes are rebuilt from scratch after cellsrv restarts (first scans are slower), flash cache was re-populated (hit ratio climbs back over hours), and a quarantine or changed default silently turned off something. Compare offload bytes before and after; a drop in 'eligible' bytes with the same workload is the signal.",cmd:"# 1. Did offload volume change for the same workload?\nSELECT name,value FROM v$sysstat WHERE name IN ('cell physical IO bytes eligible for predicate offload','cell physical IO bytes saved by storage index','cell flash cache read hits');\n# 2. Quarantines added by the patch's first crashes?\ndcli -g ~/cell_group -l celladmin 'cellcli -e list quarantine attributes name,creationTime,quarantineType'\n# 3. Flash cache warming: hit ratio trend\ncellcli -e list metrichistory where name='FC_IO_BY_R_MISS_SEC' and collectionTime > '<patch-time>' | tail -30\n# 4. Anything left offline or resyncing?\ndcli -g ~/cell_group -l celladmin \"cellcli -e list griddisk attributes name,asmmodestatus where asmmodestatus != 'ONLINE'\"\nSELECT * FROM v$asm_operation;\n# 5. Confirm every layer is on the version you think\ndcli -g ~/all_group -l root 'imageinfo -ver'; crsctl query crs activeversion -f; $ORACLE_HOME/OPatch/opatch lspatches\n# 6. Then AWR diff: ADDM compare before/after\n@?/rdbms/admin/awrddrpt.sql"},
   {id:"t_rebal",cat:"Triage",name:"Symptom: rebalance running for hours",src:"field",desc:"After a disk or cell event, a rebalance that shows EST_MINUTES climbing instead of falling usually means a second problem: another disk in confinement, IORM capping rebalance I/O, or power set to 1 by a cautious script. Check that nothing else is offline before raising power — a second failure mid-rebalance with HIGH redundancy is survivable, with NORMAL it is not.",cmd:"# 1. State of the operation\nSELECT group_number,operation,pass,state,power,sofar,est_work,est_minutes,error_code FROM v$asm_operation;\n# 2. Anything else offline or dropping?\nSELECT name,mount_status,mode_status,state,failgroup FROM v$asm_disk WHERE mode_status != 'ONLINE' OR state != 'NORMAL';\ndcli -g ~/cell_group -l celladmin \"cellcli -e list physicaldisk where status != 'normal'\"\n# 3. Is IORM limiting rebalance?  (ASM I/O is throttled only when IORM objective is set and cells are busy)\ncellcli -e list iormplan attributes objective,status\n# 4. Raise power once you are sure nothing else is failing (max 1024; OEDA default on X11M is usually 4-8)\nALTER DISKGROUP DATA REBALANCE POWER 32;\n# 5. Watch the cell side: rebalance shows as large sequential I/O on every cell\ncellcli -e list metriccurrent CD_IO_BY_W_LG_SEC"},
   {id:"t_flash",cat:"Triage",name:"Symptom: flash cache hit ratio dropped",src:"field",desc:"Hit ratio falls when a card degrades (cache shrinks to 75 %), when a bulk load or RMAN backup floods the cache with blocks nobody reads twice, or when a database's flash share is capped by IORM. The HC cell is a disk cell the moment flash stops absorbing the reads — latency follows within minutes.",cmd:"# 1. Cache size vs expected (23.49T on a healthy X11M HC cell)\ndcli -g ~/cell_group -l celladmin 'cellcli -e list flashcache attributes name,size,effectiveCacheSize,status,degradedCelldisks'\n# 2. Hit ratio now and over the last day\ncellcli -e list metriccurrent FC_IO_BY_R,FC_IO_BY_R_MISS,FC_IO_BY_R_SEC,FC_IO_BY_R_MISS_SEC\ncellcli -e list metrichistory where name='FC_IO_BY_R_MISS_SEC' and collectionTime > '<yesterday>'\n# 3. Who is filling it? Per-database flash reads and writes\ncellcli -e list metriccurrent where name like 'DB_FC_IO_BY_SEC' or name like 'DB_FC_BY_ALLOCATED'\n# 4. Is a database capped by an IORM flash limit?\ncellcli -e list iormplan attributes dbPlan\n# 5. Keep what matters resident\nALTER TABLE orders STORAGE (CELL_FLASH_CACHE KEEP);\ncellcli -e list flashcachecontent where dbUniqueName='OLTP' attributes objectNumber,cachedKeepSize,cachedSize"},
   {id:"temp",cat:"Facility",name:"Temperature and airflow",src:"doc",desc:"Front-to-back airflow; inlet temperature is monitored per node by ILOM and reported through dbmcli/cellcli (CL_TEMP). A hot aisle leak or a blocked front door shows up as rising temperatures on the top units first.",cmd:"cellcli -e list metriccurrent CL_TEMP\ndcli -g ~/all_group -l root 'ipmitool sdr type Temperature | grep -i inlet'"}
@@ -667,6 +717,8 @@ about:{
   <li><a href="https://www.oracle.com/database/technologies/exadata/hardware/storageservers/" target="_blank" rel="noopener">Oracle: Exadata storage servers</a> — XT, HC-Z and XRMEM figures</li>
   <li><a href="https://en.wikipedia.org/wiki/Oracle_Exadata" target="_blank" rel="noopener">Wikipedia: Oracle Exadata</a> — generation release table</li>
   <li><a href="https://www.oracle.com/database/technologies/exadata/exadata-dmg/" target="_blank" rel="noopener">Oracle: Exadata decision-maker's guide</a></li>
+  <li><a href="https://docs.oracle.com/en/database/oracle/zero-downtime-migration/" target="_blank" rel="noopener">Oracle docs: Zero Downtime Migration</a></li>
+  <li>My Oracle Support (login required): 888828.1 — Exadata Database Machine and Exadata Storage Server Supported Versions; 757552.1 — Oracle Exadata Best Practices (master note); 1296520.1 — Exadata Smart Scan FAQ. Note numbers as remembered — confirm in MOS.</li>
 </ul>`
 },
 
@@ -708,6 +760,8 @@ glossary:{
   lede:"Every abbreviation used on this site, one line each.",
   parts:[],scenarios:[],
   doc:`<div class="scroll"><table><thead><tr><th>Term</th><th>Meaning</th></tr></thead><tbody>
+<tr><td>ACFS</td><td>ASM Cluster File System — a POSIX file system on ASM, supported on Exadata for file-based needs such as GoldenGate trails</td></tr>
+<tr><td>ADO</td><td>Automatic Data Optimization — policies that compress or move segments as they age, used to drive HCC</td></tr>
 <tr><td>AHF / exachk</td><td>Autonomous Health Framework; exachk is its Exadata-wide best-practice and critical-issue audit</td></tr>
 <tr><td>ASM</td><td>Automatic Storage Management — Oracle's volume manager and file system; on Exadata it stripes and mirrors across grid disks</td></tr>
 <tr><td>ASR</td><td>Auto Service Request — ILOM/MS send hardware faults to Oracle, which opens a service request automatically</td></tr>
@@ -735,19 +789,23 @@ glossary:{
 <tr><td>IORM</td><td>I/O Resource Manager — per-database and per-PDB I/O shares and limits enforced in cellsrv</td></tr>
 <tr><td>KVM / VM cluster</td><td>Oracle's hypervisor image on a database server / a Grid Infrastructure cluster made of guests</td></tr>
 <tr><td>LUN</td><td>The disk controller's view of one physical disk; one per disk in pass-through mode</td></tr>
+<tr><td>OMF</td><td>Oracle Managed Files — files named and placed by the database in ASM disk groups (db_create_file_dest, db_recovery_file_dest)</td></tr>
 <tr><td>OEDA / OneCommand</td><td>Oracle Exadata Deployment Assistant — the configuration generator / the step runner that deploys a rack from it</td></tr>
 <tr><td>patchmgr / dbnodeupdate</td><td>The patch driver for cells, database servers and switches / the script it runs on a database server</td></tr>
 <tr><td>PDU</td><td>Power distribution unit; two per rack, each on its own circuit</td></tr>
 <tr><td>PFC / ECN</td><td>Priority flow control / explicit congestion notification — what keeps the RoCE fabric lossless</td></tr>
 <tr><td>Quarantine</td><td>cellsrv's refusal to offload a SQL plan, database or everything after that caused a crash</td></tr>
+<tr><td>Reverse offload</td><td>cellsrv sending blocks back unfiltered when cell CPUs are saturated, so database servers share the filtering work</td></tr>
 <tr><td>RDMA / RoCE / RDS</td><td>Remote direct memory access / RDMA over Converged Ethernet (the fabric) / Reliable Datagram Sockets (the transport iDB uses)</td></tr>
 <tr><td>Secure Fabric</td><td>Per-VM-cluster isolation of the RoCE fabric (VLAN-style) for multi-tenant Exadata</td></tr>
 <tr><td>Smart Scan</td><td>Predicate filtering, column projection and join filtering executed inside the cells for full scans</td></tr>
 <tr><td>Sparse grid disk</td><td>Thin-provisioned grid disk for Exadata snapshot databases</td></tr>
 <tr><td>Storage index</td><td>In-memory min/max per column per 1 MB region on each cell; lets Smart Scan skip regions</td></tr>
 <tr><td>sundiag</td><td>Hardware diagnostic collector for Oracle Support</td></tr>
+<tr><td>XTTS</td><td>Cross-platform transportable tablespaces — moving tablespaces between endian formats with RMAN conversion and incremental roll-forward</td></tr>
 <tr><td>XRMEM</td><td>Exadata RDMA Memory — cell DRAM read directly by database servers over RDMA (replaced PMEM from X10M)</td></tr>
 <tr><td>ZDLRA</td><td>Zero Data Loss Recovery Appliance — Oracle's backup appliance, built on the same engineering</td></tr>
+<tr><td>ZDM</td><td>Zero Downtime Migration — Oracle's tool that automates physical (Data Guard/RMAN) and logical (Data Pump/GoldenGate) migrations onto Exadata and cloud</td></tr>
 <tr><td>ZDP</td><td>Zero-loss Zero-copy Datagram Protocol — the RDMA transport used for Smart Scan result delivery on RoCE fabrics</td></tr>
 </tbody></table></div>`
 },
@@ -757,7 +815,7 @@ lab:{
   lede:"Choose servers and redundancy; the rack redraws and the capacity, memory and fault-tolerance figures update.",
   parts:[],scenarios:[],
   doc:`<h2>How to read the numbers</h2>
-<p>Raw capacity is the sum of primary storage devices (HDD on HC and XT, capacity flash on EF). Usable is raw divided by the number of ASM copies, minus 15 % kept free so a cell loss can rebalance. Flash and XRMEM are totals across cells — remember that XT cells add flash but no XRMEM. Database memory is database servers × DIMM configuration. Nothing here replaces OEDA or an Oracle sizing exercise; it exists so you can feel how the proportions move.</p>`
+<p>Raw capacity is the sum of primary storage devices (HDD on HC and XT, capacity flash on EF). Usable is raw divided by the number of ASM copies, minus 15 % kept free so a cell loss can rebalance. Flash and XRMEM are totals across cells — remember that an XT cell has two flash devices instead of four and no XRMEM. Database memory is database servers × DIMM configuration. Nothing here replaces OEDA or an Oracle sizing exercise; it exists so you can feel how the proportions move.</p>`
 }
 };
 </script>
@@ -846,6 +904,521 @@ iopath:{
 });
 </script>
 <script>
+// ===== THEORY BLOCKS =====
+// lvl: Basics | Working knowledge | Internals.  src: doc (Oracle documentation) | field (practitioner knowledge, verify).
+const THEORY={};
+
+THEORY.about=[
+{lvl:'Basics',title:'Design principles — why Exadata looks the way it does',src:'doc',html:`
+<p>Five decisions explain every component on this site.</p>
+<ol>
+<li><b>Move the work to the data.</b> Storage servers run database code (cellsrv), so filtering, projection, decompression and join filtering happen next to the disks. The fabric carries answers, not blocks.</li>
+<li><b>Balance the ratios.</b> Each storage server adds CPU, flash, memory and disk together, so scan throughput, IOPS and capacity grow in step. There is no single array controller to saturate. Oracle sizes the minimum configuration (2 database + 3 storage servers) so that neither tier bottlenecks the other.</li>
+<li><b>Tier automatically.</b> Hot blocks live in XRMEM and flash, cold data on disk, and cellsrv decides — the DBA pins exceptions rather than placing files.</li>
+<li><b>Remove the kernel from the path.</b> RDMA over a lossless RoCE fabric lets a database server read cell memory and ship Cache Fusion blocks without interrupts or copies. Latency becomes a property of the architecture, not a tuning outcome.</li>
+<li><b>Ship one tested image.</b> Firmware, OS, hypervisor, cell software and switch configuration are versioned and patched as one release. The DBA inherits Oracle's interoperability matrix instead of maintaining one.</li>
+</ol>
+<p>Everything else — HIGH redundancy, IORM, Capacity on Demand, quarantines — follows from making those five decisions safe to operate.</p>`},
+{lvl:'Working knowledge',title:'The software stack, layer by layer',src:'doc',html:`
+<div class="scroll"><table><thead><tr><th>Layer</th><th>What it is</th><th>Where you see the version</th><th>Patched with</th></tr></thead><tbody>
+<tr><td>Firmware</td><td>ILOM, BIOS, disk/flash/HBA/NIC firmware, switch NX-OS</td><td><code>ipmitool mc info</code>, <code>show version</code></td><td>Inside the server images; patchmgr for switches</td></tr>
+<tr><td>Operating system image</td><td>Oracle Linux + UEK built by Oracle for Exadata ("dbserver image", "cell image")</td><td><code>imageinfo</code></td><td>patchmgr → dbnodeupdate / cell patch</td></tr>
+<tr><td>Hypervisor (optional)</td><td>Oracle Linux KVM on database servers</td><td><code>imageinfo</code> shows Node type: KVMHOST</td><td>patchmgr (host), then guests</td></tr>
+<tr><td>Exadata System Software</td><td>cellsrv, MS, RS on cells; MS + dbmcli on database servers; exadcli/dcli</td><td><code>cellcli -e list cell attributes releaseVersion</code></td><td>Same release as the images</td></tr>
+<tr><td>Grid Infrastructure</td><td>Clusterware + ASM, standard Oracle releases</td><td><code>crsctl query crs activeversion -f</code></td><td>opatchauto (RU)</td></tr>
+<tr><td>Database homes</td><td>19c, 23ai, 26ai RDBMS, Exadata-aware by detecting cell storage</td><td><code>opatch lspatches</code></td><td>opatchauto + datapatch</td></tr>
+<tr><td>Tooling</td><td>AHF (exachk, TFA), ExaWatcher, OEDA, sundiag, ASR</td><td><code>ahfctl version</code></td><td>Separately, frequently</td></tr>
+</tbody></table></div>
+<p>The release matrix that ties these together is MOS note 888828.1 (Exadata Database Machine and Exadata Storage Server Supported Versions): which GI/DB releases a given Exadata System Software release supports, and what the minimum is.</p>`},
+{lvl:'Internals',title:'What you pay for, and what you do not',src:'field',html:`
+<p>Practitioner summary of the licensing shape; confirm every number with your Oracle contract.</p>
+<ul>
+<li><b>Database licences</b> are per enabled database-server core (Enterprise Edition plus options such as RAC, Partitioning, Diagnostics and Tuning). Capacity on Demand lets you enable a subset of cores at deployment and grow later; cores disabled in BIOS are not licensed.</li>
+<li><b>Exadata System Software</b> (the storage server software) is licensed per disk drive and per flash device in the storage servers. That is the price of Smart Scan, flash cache, IORM, HCC and the rest; it is also why XT cells, which need no storage software licence unless you want Smart Scan, are the cheap tier.</li>
+<li><b>Cell CPU is free compute</b> in licensing terms: 64 cores per cell execute Smart Scan and are not database cores. This is why offloading work to cells is more than a performance trick — it moves CPU cycles from the licensed tier to the unlicensed one.</li>
+<li><b>Hybrid Columnar Compression</b> needs no Advanced Compression licence on Exadata; OLTP (row) compression does.</li>
+<li><b>Cloud models</b> turn all of this into subscription: ECPUs (ExaDB-D, ExaDB-XS) or OCPUs, with the storage software included in the service.</li>
+</ul>`}
+];
+
+THEORY.dbserver=[
+{lvl:'Basics',title:'What a database server is — and what it is not',src:'doc',html:`
+<p>An Exadata database server is a compute node. It runs Oracle Linux, Grid Infrastructure and database instances (or a KVM hypervisor hosting guests that do). It holds <b>no database files</b>: datafiles, redo, control files, voting files and OCR all live on storage server grid disks reached over the RoCE fabric. Its only local storage is two mirrored NVMe devices for the operating system, Oracle homes and, on a KVM host, guest images.</p>
+<p>On X11M it is physically the same 2U Exadata Server X11M chassis as a storage server, with a 4-bay NVMe front instead of twelve disk bays. Inside: two 96-core AMD EPYC 9J25, 512 GB to 3 TB of DDR5-6400, one dual-port CX7 RDMA adapter in PCIe slot 5, two factory CX6-LX client adapters, two 1400 W power supplies, six fans and an ILOM service processor.</p>
+<p>Three networks leave the server: the <b>RoCE fabric</b> (storage I/O, Cache Fusion, cluster heartbeat), the <b>client network</b> (SCAN, VIPs, applications, Data Guard, backups) and the <b>administration network</b> (eth0 plus the ILOM port). Applications never talk to a storage server.</p>
+<div class="lbl">See it</div>
+<pre>imageinfo                      # image version, node type (COMPUTE / KVMHOST / GUEST)
+dbmcli -e list dbserver detail # hardware inventory and status
+lsblk -o NAME,SIZE,TYPE,MOUNTPOINT   # the only disks: 2 x NVMe, mirrored
+ip -br addr                    # eth0, bondeth0, re0/re1, clre0/clre1</pre>`},
+{lvl:'Working knowledge',title:'The Exadata image: what is on the disk and what you may change',src:'doc',html:`
+<p>The database server runs the <b>Exadata database server image</b>: Oracle Linux with the Unbreakable Enterprise Kernel, prebuilt by Oracle with the RDMA stack, tuned kernel parameters, Exadata services (MS for dbmcli, ExaWatcher, the firmware update framework) and the LVM layout the patch tools expect. You do not run <code>yum update</code> against public repositories or install a different kernel; you apply the next image with patchmgr.</p>
+<p><b>LVM layout.</b> Volume group <code>VGExaDb</code> holds two system logical volumes, <code>LVDbSys1</code> and <code>LVDbSys2</code>. One is the active root; the other is the inactive copy that dbnodeupdate uses as the backup and rollback target during an image update. Alongside them: <code>LVDbOra1</code> mounted as <code>/u01</code> for Grid and database homes, swap, and on recent images separate volumes for <code>/var</code>, <code>/var/log</code>, <code>/var/log/audit</code>, <code>/home</code> and <code>/tmp</code>. A reserved volume (<code>LVDoNotRemoveOrUse</code>) is kept free for the snapshot that dbnodeupdate takes. Free space in the volume group is what makes upgrades and rollbacks possible — the first thing patchmgr prechecks.</p>
+<p><b>What you may change.</b> Oracle documents the supported customisations (MOS notes on Exadata database server software changes): adding RPMs from Oracle's channels that do not replace kernel or Exadata packages, your own users and cron jobs, monitoring agents, tuning of database parameters. Not supported: replacing the kernel, changing the RDMA or network configuration by hand, altering IRQ affinity, installing third-party storage drivers, or reconfiguring LVM so that the dual-system layout disappears.</p>
+<p><b>Memory.</b> OEDA configures huge pages for the planned SGAs and the image sets <code>vm.nr_hugepages</code> accordingly; Automatic Memory Management (<code>MEMORY_TARGET</code>) cannot use huge pages on Linux and is not used on Exadata. Budget per server: the sum of SGAs and PGA targets, plus the ASM instance, plus operating-system headroom, plus the hypervisor's own reservation on a KVM host.</p>
+<p><b>Reading a release string.</b> <code>25.1.3.0.0.250409</code> = release 25.1 (the 2025 yearly release), update 3, build dated 2025-04-09. The yearly release sets the kernel and OS generation; updates bring fixes and hardware enablement. <code>imagehistory</code> lists every image the node has run, including the rollback copy.</p>
+<div class="lbl">See it</div>
+<pre>imagehistory
+lvs -o lv_name,lv_size,lv_attr VGExaDb
+vgs VGExaDb                                  # VFree is what patchmgr needs
+grep -E 'HugePages_(Total|Free)' /proc/meminfo
+cat /etc/oracle/cell/network-config/cellip.ora</pre>`},
+{lvl:'Internals',title:'NUMA, PCIe, KVM and Capacity on Demand',src:'field',html:`
+<p><b>NUMA.</b> Each EPYC socket is a NUMA node with its own twelve memory channels. The CX7 fabric adapter sits in PCIe slot 5, on one socket's lanes; RDMA completions therefore land in that socket's memory first. Oracle's image pins interrupt handling for the fabric accordingly and leaves the rest to the kernel's NUMA scheduler. Do not hand-tune IRQ affinity or pin instances to sockets on an Exadata node: the image is tuned as a whole and the next update will not expect your changes.</p>
+<p><b>KVM.</b> When deployed virtualised, the server runs Oracle's KVM hypervisor image. Each guest is a full Exadata guest image with its own Grid Infrastructure in its own VM cluster. Guest images live on the local NVMe under <code>/EXAVMIMAGES</code>, which is why local storage can be expanded to four devices. Guests reach the RoCE fabric through SR-IOV virtual functions — the guest sees <code>stre0/stre1</code> (storage) and <code>clre0/clre1</code> (cluster) backed by the physical <code>re0/re1</code> ports — and the client network through bridged or VF interfaces on the CX6-LX adapters. vCPUs can be overprovisioned across guests within Oracle's documented limit; memory cannot. <code>vm_maker</code> is the only supported management tool: it creates, sizes, starts, stops and deletes guests and keeps the hypervisor's configuration consistent with what patchmgr expects. Every Exadata cloud service is this KVM layout underneath.</p>
+<p><b>Secure RDMA Fabric Isolation.</b> On RoCE racks (Exadata System Software 20.1 and later), VM clusters can be isolated from each other on the fabric with VLAN-style tagging while all still reach the storage servers. Cache Fusion traffic of one tenant cannot be seen by another; the cells remain shared.</p>
+<p><b>Capacity on Demand.</b> Cores are disabled in BIOS through dbmcli (<code>pendingCoreCount</code>) and take effect at the next reboot; the physical server never changes. Minimum active cores per server and the rules for KVM guests are set by Oracle's licensing documentation for the generation — check them before quoting a number.</p>
+<p><b>dbnodeupdate under the hood.</b> patchmgr copies the update payload and drives dbnodeupdate.sh on each node: precheck (space, dependencies, running processes), backup of the active system partition into the inactive LV (a snapshot of <code>/</code> taken with the reserved LV), stop of Grid Infrastructure, yum-style update from the ISO repository, reboot into the new image, post-steps and relink checks, then Grid Infrastructure restart. Rollback (<code>--rollback</code>) swaps the active system LV back and reboots — which is why keeping the dual-system layout intact is non-negotiable.</p>
+<div class="lbl">See it</div>
+<pre>numactl -H
+cat /sys/class/net/re0/device/numa_node
+vm_maker --list-domains; vm_maker --list --domain &lt;guest&gt;
+dbmcli -e list dbserver attributes coreCount,cpuCount,pendingCoreCount
+./patchmgr --dbnodes ~/dbs_group --backup --iso_repo &lt;zip&gt; --target_version &lt;ver&gt;   # backup-only run</pre>`}
+];
+
+THEORY.cell=[
+{lvl:'Basics',title:'Anatomy of a cell and the three processes that run it',src:'doc',html:`
+<p>A storage server is a 2U Linux server whose job is to store database data and execute database work on it. It has no client network and is reachable only over the RoCE fabric (data) and the administration network (management). Its three processes:</p>
+<ul>
+<li><b>cellsrv</b> — the storage server. Serves iDB requests, runs Smart Scan, manages XRMEM, flash cache and flash log, enforces IORM, maintains storage indexes, writes the cell alert log.</li>
+<li><b>MS (Management Server)</b> — configuration, metrics, alerts, SNMP/ASR. cellcli talks to MS. If MS stops, I/O continues.</li>
+<li><b>RS (Restart Server)</b> — the watchdog that restarts cellsrv or MS and raises an alert if restarts keep failing.</li>
+</ul>
+<p><b>Storage objects.</b> Physical disk → LUN → cell disk → grid disks. A cell disk is cellsrv's logical disk on a LUN; grid disks are slices of it (DATA on the outer tracks, RECO inner) and are what ASM sees. Flash devices become FD cell disks that host flash cache and flash log rather than grid disks. One cell = one ASM failure group.</p>
+<p><b>Three models.</b> High Capacity (12 HDD + 4 flash + XRMEM), Extreme Flash (4 capacity-flash + 4 performance-flash + XRMEM), Extended (12 HDD, two flash devices instead of four, single CPU, 256 GB, no XRMEM, Smart Scan licensed separately). The HC-Z entry cell halves the disks and memory.</p>
+<div class="lbl">See it</div>
+<pre>cellcli -e list cell detail
+cellcli -e list physicaldisk; cellcli -e list lun; cellcli -e list celldisk; cellcli -e list griddisk
+cellcli -e list flashcache detail; cellcli -e list flashlog detail; cellcli -e list xrmemcache detail</pre>`},
+{lvl:'Working knowledge',title:'Smart Scan, storage indexes, flash and XRMEM — how the cell actually works',src:'doc',html:`
+<h3>What Smart Scan offloads</h3>
+<p>For direct-path full scans (TABLE ACCESS STORAGE FULL, INDEX STORAGE FAST FULL SCAN) the database sends each cell the predicate, the projected columns and any join Bloom filters. The cell returns rows and columns, not blocks. Offloaded work includes: predicate evaluation (simple comparisons, IN-lists, LIKE, most built-in functions — <code>v$sqlfn_metadata.offloadable</code> says which), column projection, Bloom-filter join filtering, virtual column evaluation, decryption of TDE-encrypted blocks (the database passes the key), decompression of HCC compression units, JSON and XML predicates, inline LOB predicates, incremental backup block filtering, fast file creation and, on current software with 23ai/26ai, vector distance computations for AI Vector Search.</p>
+<h3>Why some blocks come back as blocks</h3>
+<p>Cells cannot apply undo. A block with uncommitted changes from another session, or with an interested-transaction entry the cell cannot resolve from the SCN information it was given, is returned whole for the database server to roll back. Chained rows are fetched by the database server. These paths are visible as "cell blocks processed by txn layer" (resolved on the cell with the commit cache and minimum-active-SCN optimisations) versus blocks returned in passthrough mode. Heavy concurrent DML on a table being scanned is the usual cause of a Smart Scan that offloads little.</p>
+<h3>Storage index</h3>
+<p>For each 1 MB storage region of each cell disk, cellsrv keeps the minimum and maximum (and null presence) of a small number of columns, built as Smart Scans run. A predicate whose range cannot intersect a region skips the read entirely; "cell physical IO bytes saved by storage index" counts the benefit. Since Exadata System Software 18.1 the index also tracks set membership for low-cardinality columns (IN-lists), and since 21.2 storage indexes are persisted to disk and survive a cellsrv restart. The payoff depends on data order: a table loaded by date has near-perfect regions for date predicates and useless ones for a random column.</p>
+<h3>Smart Flash Cache</h3>
+<p>Write-back by default on current configurations: writes land in flash and are acknowledged; cellsrv destages to disk later. Dirty data is protected because ASM wrote the same block to two or three cells, each caching its copy — a lost flash card is resilvered from the mirror copies on other cells. Population policy favours small random I/O; large scans bypass the cache unless the data is in the <b>columnar flash cache</b> (an in-memory columnar format kept in flash for Smart Scan) or the object is marked <code>CELL_FLASH_CACHE KEEP</code>. IORM can set flash quotas per database (<code>flashcachemin</code>, <code>flashcachemax</code>, <code>flashcachelimit</code>).</p>
+<h3>Smart Flash Log</h3>
+<p>Redo writes go to a small flash area and to disk in parallel; the cell acknowledges on the first to complete, removing disk-latency outliers from commit time. On recent software the flash log can also operate write-back, acknowledging from flash alone and destaging later (check the release notes for your version).</p>
+<h3>XRMEM</h3>
+<p>Exadata RDMA Memory: cell DRAM holding the hottest OLTP blocks, read by database servers with a direct RDMA read — the cell CPU is not involved and latency is in the tens of microseconds. The XRMEM log is the commit accelerator, taking redo writes before flash log. It replaced persistent memory from X10M; the behaviour is the same, the medium is DRAM.</p>
+<div class="lbl">See it</div>
+<pre>SELECT name,offloadable FROM v$sqlfn_metadata WHERE name IN ('UPPER','TRUNC','REGEXP_LIKE','TO_CHAR');
+SELECT name,value FROM v$sysstat WHERE name IN ('cell blocks processed by txn layer','cell blocks processed by cache layer','cell physical IO bytes saved by storage index','cell flash cache read hits','cell RDMA reads');
+cellcli -e list flashcachecontent where dbUniqueName='OLTP' attributes objectNumber,cachedKeepSize,cachedSize</pre>`},
+{lvl:'Internals',title:'HCC, IORM, disk lifecycle, offload servers',src:'doc',html:`
+<h3>Hybrid Columnar Compression</h3>
+<p>Rows are grouped into <b>compression units</b> (CUs), each spanning several blocks; inside a CU the data is stored column by column and each column compressed, which is what gives 10–15× on warehouse data. Four levels: QUERY LOW and QUERY HIGH (lighter codecs, for active data) and ARCHIVE LOW and ARCHIVE HIGH (heavier codecs, for cold data). Only direct-path loads create CUs; conventional inserts land in ordinary blocks. An updated row is migrated out of its CU into a row-compressed block, so heavy DML erodes the compression and leaves migrated rows behind — HCC is for data that is loaded and read, not churned. Locking is per CU unless the table was created with <code>ROW LEVEL LOCKING</code>. During Smart Scan the cells decompress only the projected columns; in a buffered read the database server decompresses whole CUs. Automatic Data Optimization policies can move segments to HCC as they age.</p>
+<h3>IORM</h3>
+<p>I/O Resource Manager lives in cellsrv and arbitrates the queue to each disk and flash device. The plan has three tiers: a <b>category plan</b> (workload categories across databases), an <b>inter-database plan</b> (<code>dbplan</code>: per database or per PDB, with <code>share</code> for proportional allocation, <code>limit</code> for a hard ceiling, and flash quotas), and each database's own Resource Manager plan for its consumer groups. The <code>objective</code> tells IORM what to optimise: <code>auto</code> (recommended), <code>low_latency</code>, <code>balanced</code>, <code>high_throughput</code>, or <code>basic</code> (no inter-database management, only latency protection). Critical I/O such as redo and control file writes is prioritised regardless. IORM only intervenes when a device is saturated; on an idle cell every database gets everything it asks for, which is why its effect is invisible until the day it matters.</p>
+<h3>Disk lifecycle</h3>
+<p>A physical disk moves through states that cellsrv reports and acts on: <code>normal</code>; <code>predictive failure</code> (SMART thresholds — cellsrv drops its grid disks from ASM proactively and ASR orders a replacement); <code>poor performance</code> (the disk is slow, not failed — cellsrv puts it into <b>confinement</b>, taking it offline briefly to test it, shown as <code>confinedOnline</code>/<code>confinedOffline</code>, and drops it if it fails the test); <code>critical</code> (dead; grid disks already gone). Hot replacement triggers automatic rebuild of the cell disk and grid disks with the same names, and ASM adds them back. Grid disk attributes to know: <code>status</code> (active/inactive — the cell's view) and <code>asmModeStatus</code> (ONLINE/OFFLINE/SYNCING/DROPPED — ASM's view); <code>asmDeactivationOutcome</code> says whether taking the disk offline now would be safe.</p>
+<h3>Offload servers</h3>
+<p>Since Exadata 12.2 the cell runs a separate <b>offload server</b> process per database release it serves, so one cell can offload work for 19c and 26ai databases at the same time with release-matched code; <code>list offloadgroup</code> shows them. A crash in one offload server does not take cellsrv down, and a quarantine can be scoped to one.</p>
+<div class="lbl">See it</div>
+<pre>cellcli -e list iormplan detail
+cellcli -e list metriccurrent where name like 'DB_IO_WT_.*' and metricValue > 0
+cellcli -e list physicaldisk where status != 'normal' attributes name,status,errorCount
+cellcli -e list griddisk attributes name,status,asmModeStatus,asmDeactivationOutcome
+cellcli -e list offloadgroup</pre>`}
+];
+</script>
+<script>
+THEORY.network=[
+{lvl:'Basics',title:'Three networks and what rides on each',src:'doc',html:`
+<div class="scroll"><table><thead><tr><th>Network</th><th>Speed</th><th>Interfaces on a database server</th><th>Interfaces on a cell</th><th>Carries</th></tr></thead><tbody>
+<tr><td>RDMA Network Fabric (RoCE)</td><td>2 × 100 Gb, active-active</td><td><code>re0/re1</code> physical → <code>clre0/clre1</code> (bare metal); in a KVM guest <code>stre0/stre1</code> + <code>clre0/clre1</code></td><td><code>re0/re1</code> → <code>stre0/stre1</code></td><td>Storage I/O (iDB over RDS), Cache Fusion, Clusterware heartbeat, ASM metadata</td></tr>
+<tr><td>Client</td><td>2 × 10/25 GbE bonded; optional 100 GbE</td><td><code>bondeth0</code> (eth1 + eth2), optional VLAN sub-interfaces</td><td>none</td><td>SCAN, VIPs, application sessions, Data Guard, backups</td></tr>
+<tr><td>Administration</td><td>1 GbE</td><td><code>eth0</code> + ILOM port</td><td><code>eth0</code> + ILOM port</td><td>SSH, dcli, patchmgr, OEM, ASR traps, console</td></tr>
+</tbody></table></div>
+<p>Two rules follow. First, a storage server is invisible to applications: it has no client network. Second, the fabric is closed — no routing, no customer VLANs, no changes to the switches outside Oracle's tooling — because RDMA needs a lossless network and the configuration that guarantees it is part of the Exadata release.</p>
+<p>Naming conventions you will meet: hostnames often carry a role suffix (<code>-adm</code>, <code>-ilom</code>, <code>-priv</code>, <code>-vip</code>), SCAN is three addresses in DNS round-robin on the client network, and the RoCE subnet is a private range (192.168.x.x by OEDA default) that never leaves the rack.</p>
+<div class="lbl">See it</div>
+<pre>ip -br addr
+oifcfg getif                          # which interface is public / cluster_interconnect / asm
+cat /etc/oracle/cell/network-config/cellip.ora
+srvctl config scan; srvctl config vip -node $(hostname -s)</pre>`},
+{lvl:'Working knowledge',title:'RoCE v2, what changed from InfiniBand, and client network design',src:'doc',html:`
+<h3>RoCE v2 in one page</h3>
+<p>RDMA over Converged Ethernet v2 wraps the InfiniBand transport in UDP/IP packets, so RDMA runs over ordinary 100 GbE switches. RDMA cannot tolerate dropped frames (a lost packet means a retransmit of the whole message), so the fabric is made <b>lossless</b> for the RoCE traffic class: <b>Priority Flow Control</b> (802.1Qbb) pauses a single priority queue when a buffer fills instead of dropping, and <b>ECN</b> marking with DCQCN-style congestion control makes senders slow down before buffers fill. Oracle configures the Nexus 9336C-FX2 leaves and the CX7 adapters for this — queue classes, PFC on the RoCE priority, ECN thresholds — and ships that configuration inside the Exadata release; patchmgr verifies it against a golden template.</p>
+<h3>From InfiniBand to RoCE (X8M, 2019)</h3>
+<ul>
+<li>No subnet manager: Ethernet switching and IP addressing replace the IB fabric manager.</li>
+<li>Partitions (pkeys) became VLAN-based <b>Secure RDMA Fabric Isolation</b> for VM clusters.</li>
+<li>The RDMA verbs API is unchanged, so RDS, Exafusion and iDB carried over; the database never knew the difference.</li>
+<li>Bandwidth went from 40 Gb per port to 100 Gb per port, and cables from IB QSFP to standard QSFP28.</li>
+</ul>
+<h3>Why no bonding on the fabric</h3>
+<p>The two RoCE ports are not bonded and HAIP is not used on Exadata. <b>RDS</b> (Reliable Datagram Sockets), the transport under iDB and Cache Fusion, handles multiple paths itself: it spreads connections over both ports and re-routes when one fails. Bonding or HAIP would add a layer that knows less than RDS does.</p>
+<h3>Client network design</h3>
+<p><code>bondeth0</code> defaults to active-backup, which needs nothing from the data-centre switches and fails over inside the MII monitor interval. LACP (802.3ad) doubles bandwidth but requires a port channel across both upstream switches (vPC/MLAG) that the network team must own. OEDA takes the two members from different physical adapters so that a card failure does not drop the bond. VLAN tagging on <code>bondeth0</code> lets one bond carry client, backup and Data Guard networks; optional CX6-DX adapters add 100 GbE. SCAN needs three addresses in DNS; each node needs a VIP; a GNS-managed configuration is possible but rare on Exadata.</p>
+<h3>Administration and ILOM</h3>
+<p>The ILOM is a separate computer inside each server: it is powered whenever the PSU has mains, runs even when the host is off, provides the console, power control, hardware inventory and the fault manager, and sends SNMP traps that ASR turns into service requests. NTP and DNS must be reachable from the administration network before OEDA can deploy; both are inputs to the configuration, and Clusterware depends on time being in step.</p>
+<div class="lbl">See it</div>
+<pre>ethtool clre0 | grep -E 'Speed|Link detected'
+ethtool -S clre0 | grep -iE 'pause|cnp|discard'
+cat /proc/net/bonding/bondeth0 | grep -E 'Mode|Active|MII|Slave'
+rds-info -n                           # RDS connections per peer
+ipmitool lan print 1</pre>`},
+{lvl:'Internals',title:'Protocols on the wire, counters that matter, multi-rack and isolation',src:'field',html:`
+<h3>The protocol stack</h3>
+<p>Database server to cell: <b>iDB</b> (the Intelligent Database protocol — read, write, Smart Scan command, result stream) carried by <b>RDS</b> over RDMA; Smart Scan result delivery uses the zero-copy datagram path Oracle calls <b>ZDP</b>. Database server to database server: Cache Fusion messages and blocks over RDS with the <b>Exafusion</b> direct-to-wire path, which lets a foreground process send and receive blocks without a context switch into the kernel. All of it rides the same two ports; Oracle separates storage and cluster traffic into classes on the switch so that a scan storm cannot starve heartbeats.</p>
+<h3>Reading the counters</h3>
+<div class="scroll"><table><thead><tr><th>Where</th><th>Counter</th><th>Meaning</th><th>Typical cause when it climbs</th></tr></thead><tbody>
+<tr><td><code>ethtool -S clre0</code></td><td>rx/tx_pause_ctrl_phy</td><td>PFC pause frames received/sent</td><td>A congested switch buffer; normal in small numbers, a problem if constant</td></tr>
+<tr><td><code>ethtool -S</code></td><td>rx_cnp_handled</td><td>Congestion notifications received</td><td>ECN marking at work; sustained high rate = oversubscribed link or a slow receiver</td></tr>
+<tr><td><code>ethtool -S</code></td><td>rx_discards_phy, rx_crc_errors</td><td>Frames dropped or corrupted</td><td>Bad cable or optic; the only acceptable value is zero</td></tr>
+<tr><td><code>/proc/net/rds/stats</code></td><td>retransmitted, dropped</td><td>RDS had to resend</td><td>Lossy link; shows up as erratic I/O latency before anything fails</td></tr>
+<tr><td>Switch</td><td>show queuing interface</td><td>Per-class drops and pauses</td><td>Confirms which port and class is congested</td></tr>
+<tr><td>Database</td><td>gc blocks lost, gc cr block receive time</td><td>Cache Fusion retries and latency</td><td>The symptom the DBA sees first</td></tr>
+</tbody></table></div>
+<h3>Multi-rack</h3>
+<p>Racks are joined by adding RoCE <b>spine switches</b>: each leaf uplinks to every spine, the leaf-to-leaf links inside each rack are removed, and the result is one fabric on which Grid Infrastructure and ASM see no difference. Oracle publishes the cabling table per configuration; the documented maximum number of racks depends on release and switch model — check the current Exadata Database Machine System Overview before planning. Mixing generations is allowed on RoCE (X8M and later); InfiniBand racks cannot join.</p>
+<h3>Secure RDMA Fabric Isolation</h3>
+<p>With KVM, each VM cluster can be assigned its own fabric partition: its guests' <code>clre*</code> traffic is tagged so that only members of the same VM cluster can exchange Cache Fusion traffic, while every guest still reaches the storage servers. It is the RoCE descendant of InfiniBand partitions and the reason multi-tenant Exadata is acceptable to security teams.</p>
+<h3>Failure signatures</h3>
+<ul>
+<li><b>One cable</b>: link down on one port, no eviction, half bandwidth, infinicheck names it.</li>
+<li><b>One leaf</b>: every server loses one port simultaneously; RDS reconnects; no outage.</li>
+<li><b>Both leaves</b>: no storage, no heartbeat; cluster down until a switch returns.</li>
+<li><b>Misconfigured switch</b> (someone changed a port): no outright failure — pauses and retransmits climb, I/O latency becomes erratic, patchmgr --verify-config fails.</li>
+<li><b>Bad optic</b>: CRC errors on one port; RDS retransmits; fix before it degrades into a flapping link that CSS notices.</li>
+</ul>`}
+];
+
+THEORY.overview=[
+{lvl:'Basics',title:'Why 2 + 3, and how a rack grows',src:'doc',html:`
+<p>The minimum X11M system is two database servers and three storage servers. Two database servers because Grid Infrastructure needs two nodes to be a cluster; three storage servers because ASM HIGH redundancy needs three failure groups and on Exadata every cell is one. Everything else is <b>elastic</b>: servers are added one at a time, of either kind, up to 19 per rack (at most 15 database or 17 storage), and HC, EF and XT cells may be mixed in one rack and even in one disk group (with care about performance balance).</p>
+<p>Placement is fixed by the cabling design: RoCE leaf switches in U20 and U22 with the management switch in U21, storage servers filling from U2 upward, database servers from U23 upward. Each server's CX7 port 1 goes to the U20 leaf and port 2 to the U22 leaf on the same switch port number, so a cabling table reads as one line per server.</p>
+<p>Historically racks came as Eighth, Quarter, Half and Full; those names survive as reference points (a "Quarter Rack" is the 2 + 3 minimum) but since X5 you buy servers, not rack sizes.</p>`},
+{lvl:'Working knowledge',title:'Day zero: from OEDA to a running cluster; power and cooling',src:'doc',html:`
+<h3>OEDA and OneCommand</h3>
+<p>The <b>Oracle Exadata Deployment Assistant</b> collects everything about the installation — hostnames, all three networks, DNS and NTP, time zone, cell and disk group layout, redundancy, DATA/RECO split, database and GI versions, users and groups, Capacity on Demand core counts, KVM guest definitions — and produces the configuration files: <code>databasemachine.xml</code>, the per-rack XML OEDA itself reads, the <code>cellip.ora</code>/<code>cellinit.ora</code> network files, and the step list. <b>OneCommand</b> (<code>install.sh</code>) then runs the deployment as numbered steps: validate configuration, set up required files, create users, set up cell connectivity, create cell disks, create grid disks, install and initialise cluster software, install database software, relink, create ASM disk groups, create databases, apply security fixes, install AHF, create the installation summary, resecure the machine. Each step can be run, re-run or undone individually, which is how field engineers recover a half-finished deployment.</p>
+<p>After deployment: <code>exachk</code> as the acceptance test, ASR registration, OEM discovery, and the OEDA XML archived — it is the only complete record of how the rack was built and the input to future elastic additions.</p>
+<h3>What else is in the box</h3>
+<p>Two RoCE leaves, one management switch, two PDUs, pre-run power and network cabling, cable management, and a spares kit (typically a disk, a flash card and cables). Spine switches and additional PDUs are ordered for multi-rack.</p>
+<h3>Power and cooling</h3>
+<p>Figures depend on configuration; use Oracle's site planning guide for the exact numbers. Order of magnitude: a database server draws under 1.5 kW at peak, a storage server around 1 kW, so a 19-server rack lands in the mid-teens of kW maximum and considerably less typically; cooling is the same figure in BTU/h (× 3412). PDUs come in low- and high-voltage, single- and three-phase variants; each must be on its own data-centre circuit for the redundancy to mean anything. Airflow is front-to-back; the rack needs a cold aisle in front and clearance behind for servicing.</p>`},
+{lvl:'Internals',title:'Deployment models in depth',src:'doc',html:`
+<div class="scroll"><table><thead><tr><th></th><th>Exadata Database Machine (on-premises)</th><th>Exadata Cloud@Customer</th><th>Exadata Database Service on Dedicated Infrastructure (OCI)</th><th>Exadata Exascale (ExaDB-XS)</th></tr></thead><tbody>
+<tr><td>Where</td><td>Your data centre</td><td>Your data centre</td><td>OCI region (also Azure, Google Cloud, AWS via Oracle Database@…)</td><td>OCI region</td></tr>
+<tr><td>Who owns the hardware</td><td>You</td><td>Oracle</td><td>Oracle</td><td>Oracle</td></tr>
+<tr><td>Who patches cells, hypervisor, switches</td><td>You (patchmgr)</td><td>Oracle, via control plane</td><td>Oracle</td><td>Oracle</td></tr>
+<tr><td>Who patches GI and databases</td><td>You</td><td>You (dbaascli / console), on your schedule</td><td>You (console / dbaascli)</td><td>Oracle-managed options</td></tr>
+<tr><td>Root on database servers</td><td>Yes</td><td>Yes, inside your VM cluster guests</td><td>Yes, inside guests</td><td>Yes, inside guests</td></tr>
+<tr><td>cellcli / cell access</td><td>Yes</td><td>No</td><td>No</td><td>No</td></tr>
+<tr><td>Storage model</td><td>ASM (optionally Exascale)</td><td>ASM, or Exascale on newer systems</td><td>ASM, or Exascale</td><td>Exascale pooled storage, thin vaults</td></tr>
+<tr><td>Minimum size</td><td>2 DB + 3 cells</td><td>Quarter-rack class, in ECPUs/OCPUs</td><td>Quarter-rack class</td><td>8 ECPUs</td></tr>
+<tr><td>Extra hardware in rack</td><td>—</td><td>Two control-plane servers (the OCI link)</td><td>—</td><td>—</td></tr>
+<tr><td>Billing</td><td>Capital + support + licences</td><td>Subscription per ECPU/OCPU, storage included</td><td>Subscription</td><td>Subscription, smallest step</td></tr>
+</tbody></table></div>
+<p>Cloud@Customer deserves one more sentence: the rack is an X11M with two additional control-plane servers that connect to OCI; Oracle operates everything below the VM cluster, you operate everything inside it, and the data never leaves the building. For a DBA used to on-premises Exadata the practical difference is losing <code>cellcli</code>, <code>patchmgr</code> and ILOM, and gaining <code>dbaascli</code> and the console.</p>`}
+];
+
+THEORY.iopath=[
+{lvl:'Basics',title:'The Oracle I/O stack on Exadata',src:'doc',html:`
+<p>On a conventional server an Oracle process issues a read to the OS, which hands it to a multipath driver, an HBA and a SAN. On Exadata the stack is:</p>
+<ol>
+<li><b>The Oracle process</b> (foreground, DBWn, LGWR, ARBn) decides what to read or write.</li>
+<li><b>ASM extent map</b>, cached in the database instance for every open file: which grid disk on which cell holds this extent. The ASM instance is consulted only for metadata changes (file creation, rebalance relocation), never per I/O.</li>
+<li><b>libcell</b>, linked into the Oracle binary, turns the request into an <b>iDB</b> message: "read these bytes from this grid disk", or "scan these extents with this predicate and these columns".</li>
+<li><b>RDS over RDMA</b> carries the message to the cell's storage IP through one of the two RoCE ports, and the reply comes back the same way — for a block read, as an RDMA write directly into the process's buffer.</li>
+<li><b>cellsrv</b> executes the request: a block from XRMEM, flash or disk; or a Smart Scan producing rows.</li>
+</ol>
+<p>Nothing in this path belongs to the operating system except the RDS kernel module, and RDMA keeps even that off the data path. This is why Exadata wait events start with <code>cell</code>: the database is talking to a storage server, not to a disk.</p>`},
+{lvl:'Working knowledge',title:'Read and write paths, and a latency budget',src:'field',html:`
+<h3>Reads: buffered or direct?</h3>
+<p>A buffered read brings blocks into the buffer cache (single block: <code>cell single block physical read</code>; multiblock: <code>cell multiblock physical read</code>). A <b>direct-path read</b> bypasses the buffer cache into the process's PGA — and only direct-path reads can be Smart Scans. Parallel query always reads direct. A serial full scan reads direct when the optimizer's heuristic says so: the segment is larger than the small-table threshold (a fraction of the buffer cache), and not too much of it is already cached or dirty; <code>_serial_direct_read</code> (AUTO by default) overrides it for testing. A table that shrinks below the threshold, or a buffer cache that grows, can silently turn a Smart Scan into a buffered scan — the plan line does not change, the statistics do.</p>
+<h3>Writes</h3>
+<p>DBWn writes dirty blocks in batches; every block goes to two or three cells, which land it in write-back flash cache and acknowledge (<code>db file parallel write</code> is a flash-speed wait). LGWR writes redo to two or three cells, each of which acknowledges from XRMEM log or Flash Log (<code>log file parallel write</code>); the session's <code>log file sync</code> is that plus the post. Temp spills and sort I/O also benefit from the write-back cache. Checkpoints become cheap because the cells, not the database server, decide when flash is destaged to disk.</p>
+<h3>Latency budget (order of magnitude, practitioner numbers)</h3>
+<div class="scroll"><table><thead><tr><th>Path</th><th>Typical latency</th><th>Shows up as</th></tr></thead><tbody>
+<tr><td>RDMA read from XRMEM</td><td>~15–20 µs</td><td>cell single block physical read, very low average</td></tr>
+<tr><td>Read served from Smart Flash Cache</td><td>~100–250 µs</td><td>cell single block physical read</td></tr>
+<tr><td>Read from HDD on an HC cell</td><td>3–10 ms</td><td>cell single block physical read spikes; cell multiblock physical read</td></tr>
+<tr><td>Redo write acknowledged from Flash Log / XRMEM log</td><td>~0.2–0.5 ms for the slowest of three cells</td><td>log file parallel write</td></tr>
+<tr><td>Cache Fusion block via Exafusion</td><td>tens of µs</td><td>gc cr/current block receive time</td></tr>
+<tr><td>One fabric hop</td><td>a few µs</td><td>invisible unless the fabric is sick</td></tr>
+</tbody></table></div>
+<p>The way to use the table: compare the <i>average</i> of a wait event with the tier it should be hitting. A 2 ms average single-block read on an OLTP database is not "disk is slow"; it is "my working set is not in flash — why?"</p>
+<div class="lbl">See it</div>
+<pre>SELECT event,total_waits,ROUND(time_waited_micro/NULLIF(total_waits,0)/1000,3) avg_ms FROM v$system_event WHERE event LIKE 'cell%' OR event LIKE 'log file%' OR event LIKE 'gc%receive%' ORDER BY time_waited_micro DESC;
+SHOW PARAMETER _serial_direct_read      -- hidden; testing only</pre>`},
+{lvl:'Internals',title:'Exafusion, Smart Fusion Block Transfer, extent maps under rebalance',src:'doc',html:`
+<h3>Exafusion</h3>
+<p>Cache Fusion on Exadata uses a <b>direct-to-wire</b> protocol: a foreground process posts the request directly to the RDMA adapter and the remote LMS writes the block straight into the requester's buffer. No kernel socket, no interrupt-driven copy on either side. It is why Exadata's global cache latencies are a fraction of a conventional cluster's and why Oracle treats fabric configuration as part of the database rather than the network team's business.</p>
+<h3>Smart Fusion Block Transfer</h3>
+<p>Ordinarily a hot block cannot be shipped to another instance until the redo describing its latest change is on disk. On Exadata the sending instance transfers the block immediately and lets the receiving instance wait only if it later needs to write that block to disk — the redo write happens in parallel rather than in series. For contended rows on hot tables this removes the log-write latency from the critical path of each transfer.</p>
+<h3>Extent maps and rebalance</h3>
+<p>Because the instance caches extent maps, a rebalance that relocates an extent must tell every instance that has the file open. ASM does this with a lock and a re-read of the map segment; an I/O that arrives at the old location during the move is retried transparently. This is why a rebalance is online but not free: fabric bandwidth for the data movement, database-server CPU for the ARBn slaves, and a stream of extent-map invalidations across instances.</p>
+<h3>RDMA completion semantics</h3>
+<p>An RDMA write completes when the data is in the remote memory, not when the remote CPU has looked at it. For a block read from XRMEM that is exactly what the database wants. For a write to a cell, the cell's acknowledgement is a separate message that cellsrv sends after the block is safely in write-back flash (or XRMEM log for redo) — durability is a cellsrv promise, not an RDMA property.</p>`}
+];
+</script>
+<script>
+THEORY.asm=[
+{lvl:'Basics',title:'ASM on Exadata in one page',src:'doc',html:`
+<p>ASM is the same volume manager and file system as on any Oracle server, with Exadata-specific defaults that change how you think about it:</p>
+<ul>
+<li><b>Disks are grid disks.</b> <code>asm_diskstring='o/*/*'</code>; a disk path such as <code>o/192.168.10.11;192.168.10.12/DATA_CD_00_cell01</code> names the cell's two RoCE IPs and the grid disk. There is no multipath, no udev, no ASMLib.</li>
+<li><b>Failure groups are cells.</b> ASM derives them automatically from the cell name. Every mirror copy of an extent sits on a different cell.</li>
+<li><b>Redundancy is ASM's job.</b> There is no array RAID underneath, so EXTERNAL redundancy does not exist here. HIGH (three copies) is Oracle's recommendation for DATA; NORMAL (two copies) is a conscious trade for RECO when backups live elsewhere.</li>
+<li><b>Allocation units are 4 MB</b>, and the disk group attribute <code>cell.smart_scan_capable=TRUE</code> is what permits Smart Scan on files in that group.</li>
+<li><b>Typical groups:</b> +DATA (datafiles, redo, control files, voting files, OCR), +RECO (fast recovery area), optionally +SPARSE (snapshot databases) and, on older deployments, +DBFS_DG for the shared file system.</li>
+</ul>
+<div class="lbl">See it</div>
+<pre>asmcmd lsdg
+SELECT name,failgroup,path FROM v$asm_disk WHERE group_number=1 ORDER BY failgroup,name;
+SELECT g.name,a.name,a.value FROM v$asm_diskgroup g JOIN v$asm_attribute a ON a.group_number=g.group_number WHERE a.name IN ('au_size','cell.smart_scan_capable','compatible.asm','compatible.rdbms','disk_repair_time','failgroup_repair_time','appliance.mode','content.type');</pre>`},
+{lvl:'Working knowledge',title:'Redundancy arithmetic, rebalance, repair timers and voting files',src:'doc',html:`
+<h3>Usable capacity</h3>
+<p><code>v$asm_diskgroup</code> reports <code>TOTAL_MB</code> (raw), <code>FREE_MB</code>, <code>REQUIRED_MIRROR_FREE_MB</code> (space that must stay free to restore full redundancy after the worst single failure — on Exadata, one whole cell) and <code>USABLE_FILE_MB</code> = (FREE − REQUIRED_MIRROR_FREE) ÷ copies. A negative USABLE_FILE_MB is legal and common: it means a cell loss can no longer be fully re-mirrored. On a three-cell rack with HIGH redundancy, there is no fourth failure group to re-mirror into at all; the reserve exists so ASM can at least rebuild lost disks inside the surviving cells.</p>
+<h3>Repair timers</h3>
+<p>When grid disks go offline ASM keeps them for <code>disk_repair_time</code> (default 3.6 h) before dropping them; when a <i>whole failure group</i> goes offline the longer <code>failgroup_repair_time</code> (default 24 h) applies, because a whole cell missing is usually power or a reboot, not dead media. Within the timer a returning disk gets <b>fast mirror resync</b>: only the extents written while it was away (tracked in a staleness bitmap) are copied. After the timer the disk is dropped and a full rebalance redistributes its contents.</p>
+<h3>Rebalance phases</h3>
+<p><code>v$asm_operation</code> shows three passes: <b>RESYNC</b> (fast mirror resync of stale extents), <b>REBALANCE</b> (moving extents so every disk holds its fair share and every extent has its copies on different cells) and <b>COMPACT</b> (moving extents toward the outer, faster part of each disk). <code>POWER</code> is the number of ARBn slaves (1–1024). On Exadata the disk group attribute <code>appliance.mode=TRUE</code> enables fixed partnering and faster rebalance. Rebalance I/O is large and sequential and bypasses the flash cache.</p>
+<h3>Voting files and Quorum Disk Manager</h3>
+<p>Clusterware keeps its voting files in a disk group; in a HIGH redundancy group it wants five copies in five failure groups. A rack with three or four cells cannot provide five, so Exadata's <b>Quorum Disk Manager</b> (<code>quorumdiskmgr</code>) exports small iSCSI quorum disks from the database servers' local storage, giving ASM two extra failure groups just for voting files. Without it, a three-cell rack keeps three voting files and tolerates one cell loss; with it, five and tolerates two.</p>
+<div class="lbl">See it</div>
+<pre>SELECT name,type,total_mb,free_mb,required_mirror_free_mb,usable_file_mb FROM v$asm_diskgroup;
+SELECT group_number,operation,pass,state,power,sofar,est_work,est_minutes FROM v$asm_operation;
+crsctl query css votedisk
+/opt/oracle.SupportTools/quorumdiskmgr --list --config</pre>`},
+{lvl:'Internals',title:'Partnering, extent sizes, content.type, sparse disks and security keys',src:'doc',html:`
+<h3>Partnering — why "two disks on two cells" is probable, not certain, loss</h3>
+<p>ASM does not mirror a disk to a disk. Each disk has a set of <b>partner disks</b> in other failure groups (around eight on a large group), and every extent on it is mirrored onto one or two of those partners. A second failure destroys data only if the failed disk was a partner of the first and some extent had all its copies on exactly those disks. With many cells the chance that two random disks are partners is small; with three cells it is high. This is the honest reason the simulator says "probable" for single-disk combinations, and why racks with more cells are safer than their redundancy level alone suggests. The <code>content.type</code> attribute (<code>data</code>, <code>recovery</code>, <code>system</code>) changes the partnering pattern per disk group so that DATA and RECO, which share the same physical disks, do not lose both to the same double failure.</p>
+<h3>Variable extent sizes</h3>
+<p>Extents grow with the file: the first 20,000 extents of a file are 1 AU (4 MB), the next 20,000 are 4 AU, then 16 AU. Large datafiles therefore have fewer extent-map entries, which keeps the per-instance extent map cache small and rebalance bookkeeping manageable.</p>
+<h3>Sparse grid disks and snapshots</h3>
+<p>A sparse grid disk has a <code>virtualsize</code> far larger than its physical allocation; blocks are allocated on first write. A sparse disk group hosts <b>Exadata snapshot databases</b>: a read-only test master (a full copy or a Data Guard standby) plus thin snapshots that record only their changes. Dozens of test or development databases can share one master's storage; the price is that snapshot I/O to unchanged blocks is redirected to the master, so snapshots are for test, not for production throughput.</p>
+<h3>ASM-scoped and DB-scoped security</h3>
+<p>By default any database server on the fabric can open any grid disk. <b>ASM-scoped security</b> assigns a key to an ASM cluster and lists on each grid disk (<code>availableTo</code>) which clusters may use it; <b>DB-scoped security</b> goes one level further to individual databases. The keys live in <code>cellkey.ora</code> on cells and database servers. Mandatory when XT cells or a storage expansion are shared between clusters, and when consolidation tenants must not see each other's disks.</p>
+<div class="lbl">See it</div>
+<pre>SELECT * FROM x$kfdpartner WHERE grp=1 AND disk=0;     -- partner disks of disk 0 (X$ view, undocumented)
+cellcli -e list key; cellcli -e list griddisk attributes name,availableTo
+cellcli -e list griddisk where name like 'SPARSE.*' attributes name,size,virtualSize</pre>`}
+];
+
+THEORY.ops=[
+{lvl:'Basics',title:'The release model and the five layers',src:'doc',html:`
+<p>Exadata System Software has a <b>yearly release</b> (24.1, 25.1 …) that sets the operating system and kernel generation, and <b>updates</b> within the year (25.1.1, 25.1.2 …) that bring fixes and firmware. Grid Infrastructure and the database follow Oracle's quarterly Release Updates. MOS note 888828.1 is the matrix: for each Exadata System Software release, which GI/DB releases are supported and what the minimum versions are. A quarterly patch window on Exadata therefore touches up to five layers, in this order, each rolling:</p>
+<ol>
+<li>RoCE switches (patchmgr --roceswitches), one leaf at a time</li>
+<li>Storage servers (patchmgr -cells -rolling), one cell at a time with ASM redundancy protecting the data</li>
+<li>Database server image (patchmgr --dbnodes --rolling), one node at a time</li>
+<li>Grid Infrastructure Release Update (opatchauto)</li>
+<li>Database Release Update (opatchauto) and datapatch</li>
+</ol>
+<p>Rolling means the databases stay open throughout; the cost is time (a cell takes roughly an hour including resync; a database server somewhat less) and reduced capacity while each component is out. Non-rolling is faster but needs a full outage. Switches and cells do not need a database outage either way.</p>`},
+{lvl:'Working knowledge',title:'Monitoring architecture, the pre-patch checklist, and rollback',src:'doc',html:`
+<h3>Where the telemetry comes from</h3>
+<div class="scroll"><table><thead><tr><th>Source</th><th>What it holds</th><th>How you read it</th></tr></thead><tbody>
+<tr><td>MS metrics (cell and database server)</td><td>Hundreds of counters collected every minute, kept 7 days by default (<code>metricHistoryDays</code>)</td><td><code>cellcli -e list metriccurrent / metrichistory</code>, OEM Exadata plug-in</td></tr>
+<tr><td>MS alerts</td><td>Stateful alerts (raised, then cleared: disk failed / disk replaced) and stateless events (cellsrv restarted); severities clear, info, warning, critical</td><td><code>list alerthistory</code>; mark reviewed with <code>examinedBy</code>; delivered by SNMP to ASR and OEM, by SMTP if configured</td></tr>
+<tr><td>Cell alert log</td><td>cellsrv's own log: ORA- errors, restarts, quarantines, disk events</td><td><code>/opt/oracle/cell/log/diag/asm/cell/&lt;cell&gt;/trace/alert.log</code></td></tr>
+<tr><td>ExaWatcher</td><td>OS statistics every few seconds (CPU, memory, disk, network, RDS) kept about a week on every node</td><td><code>/opt/oracle.ExaWatcher/archive</code>; <code>GetExaWatcherResults.sh</code> to extract a window</td></tr>
+<tr><td>AHF</td><td>exachk (best practices and critical issues), TFA (cluster-wide diagnostic collection), Insights</td><td><code>exachk</code>, <code>tfactl diagcollect</code>, <code>ahfctl</code></td></tr>
+<tr><td>ILOM</td><td>Hardware faults, sensor readings, system event log</td><td><code>ipmitool sel elist</code>, ILOM web/CLI, SNMP traps</td></tr>
+<tr><td>Database</td><td>Exadata wait events and statistics, AWR's Exadata section, SQL Monitor offload columns</td><td>AWR, ASH, <code>v$sysstat</code>, <code>v$sql</code></td></tr>
+</tbody></table></div>
+<h3>Before a patch window</h3>
+<ul>
+<li>exachk run and critical findings fixed; the HTML report archived for the before/after comparison.</li>
+<li>Every disk group HIGH or at least fully mirrored, no disk offline, no rebalance running (<code>v$asm_operation</code> empty).</li>
+<li><code>disk_repair_time</code> / <code>failgroup_repair_time</code> long enough to outlast the longest cell outage you can imagine (Oracle's patch README gives the value; many sites set 24 h for the window).</li>
+<li><code>asmdeactivationoutcome = Yes</code> on every grid disk of every cell — the cell can be taken offline without losing redundancy.</li>
+<li>Free space in <code>VGExaDb</code> on every database server, and in <code>/</code> and <code>/u01</code>, as patchmgr's precheck demands.</li>
+<li>patchmgr prechecks run for switches, cells and database servers — and read, not just passed.</li>
+<li>Backups current; the Exadata image ISO, GI and DB patches staged on a node that is not being patched first.</li>
+</ul>
+<h3>Rollback paths</h3>
+<p>Switches: patchmgr <code>--downgrade</code> to the previous NX-OS. Cells: patchmgr <code>-rollback</code>, which boots the previous image kept on the cell's system disks. Database servers: patchmgr <code>--rollback</code> (dbnodeupdate swaps back to the inactive system LV). Grid Infrastructure and database: <code>opatchauto rollback</code> and <code>datapatch</code>. Each layer rolls back independently, which is why the order of application matters: never move the database to a release the cells do not yet support.</p>`},
+{lvl:'Internals',title:'Containment, security hardening, backup and disaster recovery',src:'field',html:`
+<h3>Containment mechanisms</h3>
+<ul>
+<li><b>Quarantine.</b> After a cellsrv crash the cell records what it was doing and refuses to do it again: a <code>SQL PLAN</code> quarantine (one SQL ID and plan hash), a <code>DISK REGION</code> quarantine (one 1 MB region), a <code>DATABASE</code> quarantine (no offload for that database), or a cell-wide <code>CELL OFFLOAD</code> quarantine after repeated crashes. The quarantined work falls back to block I/O, so the symptom is a slow query, not an error. <code>list quarantine detail</code> names the SQL, the incident and the crash reason; drop it only after the fix is applied.</li>
+<li><b>Confinement.</b> A slow disk is tested in isolation before it is dropped, so one bad drive cannot drag a cell's latency down for days.</li>
+<li><b>RS restart policy.</b> cellsrv and MS are restarted automatically; repeated failures within a short window stop the loop and raise a critical alert rather than thrash.</li>
+<li><b>Reverse offload.</b> When cell CPUs are saturated, cellsrv sends some blocks back unfiltered for the database server to process ("cell physical IO bytes sent directly to DB node to balance CPU"). Sustained reverse offload means the cells are the bottleneck — more cells, or less work.</li>
+<li><b>IORM</b> contains one database's I/O appetite; <b>Resource Manager</b> inside the database contains one user's.</li>
+</ul>
+<h3>Security hardening</h3>
+<ul>
+<li><code>host_access_control</code> (<code>/opt/oracle.cellos/host_access_control</code>) centralises the OS hardening knobs: SSH settings, password policy, account lockout, login banners, access control lists for which hosts may SSH in, and secure/non-secure modes. Use it instead of editing PAM and sshd files by hand — the image expects it.</li>
+<li>ILOM: change default accounts, use individual users or LDAP/AD, restrict the ILOM network, enable the audit log.</li>
+<li>Transparent Data Encryption works with Smart Scan: the database passes the key to the cells, which decrypt during the scan using the CPUs' AES instructions; encrypted tablespaces lose little offload performance.</li>
+<li>ASM-scoped / DB-scoped security on grid disks for multi-tenant racks; Secure Fabric for VM clusters.</li>
+<li><b>Secure Eraser</b> wipes disks, flash and XRMEM to standards before a server leaves the rack; <b>AIDE</b> (file-integrity monitoring) is installed and run by the image; exachk reports on all of these.</li>
+</ul>
+<h3>Backup and disaster recovery</h3>
+<ul>
+<li><b>RMAN on Exadata</b> offloads incremental backup filtering: cells return only blocks changed since the last backup, so a level-1 is bounded by change rate, not database size. Use <code>SECTION SIZE</code> so big datafiles back up in parallel, and enough channels to use the cells' throughput; IORM can cap backup I/O with a category plan.</li>
+<li><b>Where backups land</b> decides the RECO split: in +RECO (fast, needs 40–60 % of the disks), on a ZFS Storage Appliance over the client or backup network, or on a <b>Zero Data Loss Recovery Appliance</b> (incremental-forever with real-time redo transport — the Exadata-native answer).</li>
+<li><b>Data Guard</b> between Exadatas gives a standby that also Smart Scans (Active Data Guard reporting at full speed); redo transport uses the client or a dedicated network, and a Far Sync instance can close the synchronous-replication distance gap.</li>
+<li><b>Snapshots</b> on sparse disk groups are the test-master pattern: refresh a master from production (or from a standby), then cut thin snapshots for every test team.</li>
+</ul>`}
+];
+
+THEORY.brk=[
+{lvl:'Basics',title:'How Exadata is built to fail',src:'doc',html:`
+<p>Every component in the rack exists at least twice, and the software knows which copy it is using:</p>
+<ul>
+<li>Two power supplies per server and switch, on two PDUs, on two circuits.</li>
+<li>Two RoCE ports per server into two leaf switches, with RDS choosing the path.</li>
+<li>Two or three copies of every extent on two or three cells, with ASM choosing where to read.</li>
+<li>Two NVMe system devices per database server (mirrored), two system devices per cell.</li>
+<li>Two or more database servers, with services and SCAN relocating between them.</li>
+<li>Three or five voting files on three or five failure groups, so cluster membership survives a cell.</li>
+<li>Flash cards whose dirty data is mirrored by ASM on other cells; flash log mirrored by disk.</li>
+</ul>
+<p>What is <i>not</i> duplicated: the management switch (its loss affects administration, not data) and, inside one rack, the data centre itself — which is where Data Guard and multi-site designs begin.</p>`},
+{lvl:'Working knowledge',title:'Failure taxonomy: what fails, what protects, how you know, what you do',src:'field',html:`
+<div class="scroll"><table><thead><tr><th>Component</th><th>Failure</th><th>Protection</th><th>Detection</th><th>Recovery</th></tr></thead><tbody>
+<tr><td>HDD (cell)</td><td>Predictive failure</td><td>ASM mirrors on other cells; cellsrv proactive drop</td><td>cell alert, ASR SR, <code>list physicaldisk</code></td><td>Hot swap; auto rebuild of cell and grid disks; ASM rebalances</td></tr>
+<tr><td>HDD (cell)</td><td>Poor performance</td><td>Confinement test</td><td><code>confinedOnline</code>, latency metrics</td><td>Let the cell decide; replace if dropped</td></tr>
+<tr><td>HDD (cell)</td><td>Critical / dead</td><td>ASM mirrors</td><td>Critical alert; grid disks OFFLINE then DROPPED</td><td>Hot swap; rebalance</td></tr>
+<tr><td>Flash card (cell)</td><td>Failure or degradation</td><td>Dirty cache mirrored by ASM on other cells; flash log mirrored on disk</td><td>Alert; <code>list flashcache</code> degradedCelldisks; hit ratio drops</td><td>Hot swap; cell recreates cache; resilvers from mirrors</td></tr>
+<tr><td>Cell system disk</td><td>One of two fails</td><td>Software mirror</td><td>Alert; <code>mdadm</code>/lsblk shows degraded</td><td>Hot swap; mirror rebuild</td></tr>
+<tr><td>Cell DIMM</td><td>Correctable errors / uncorrectable</td><td>ECC; XRMEM content is a cache</td><td>ILOM fault, MS alert</td><td>Schedule replacement; uncorrectable = cell reboot, ASM resync</td></tr>
+<tr><td>cellsrv</td><td>Crash</td><td>RS restarts it; quarantine prevents recurrence</td><td>Stateless alert, alert.log, <code>list quarantine</code></td><td>Collect sundiag; apply fix; drop quarantine</td></tr>
+<tr><td>Whole cell</td><td>Power / kernel / reboot</td><td>ASM redundancy, repair timers</td><td>Grid disks OFFLINE in ASM; ILOM reachable or not</td><td>Fix within failgroup_repair_time; fast resync on return</td></tr>
+<tr><td>DB server NVMe</td><td>One of two fails</td><td>Software RAID mirror</td><td>ILOM / dbmcli alert</td><td>Hot swap; mirror rebuild</td></tr>
+<tr><td>DB server DIMM</td><td>Uncorrectable</td><td>ECC, then node crash → RAC instance recovery</td><td>ILOM fault; CRS reconfiguration</td><td>Replace; node rejoins</td></tr>
+<tr><td>DB server PSU</td><td>Failure</td><td>Second PSU</td><td>ILOM / dbmcli, ASR</td><td>Hot swap</td></tr>
+<tr><td>DB server</td><td>Kernel panic / hang</td><td>CSS eviction, instance recovery, service relocation</td><td>ocssd.trc, alert logs, ILOM console</td><td>Reboot; diagnose from SEL and vmcore</td></tr>
+<tr><td>RoCE cable or optic</td><td>Link down / CRC errors</td><td>Second port; RDS re-routes</td><td>ethtool, infinicheck, RDS retransmits</td><td>Replace cable/optic; no downtime</td></tr>
+<tr><td>RoCE leaf switch</td><td>Failure</td><td>Second leaf</td><td>All servers lose one port at once</td><td>Replace; configure with patchmgr golden config</td></tr>
+<tr><td>Both leaves</td><td>Failure or wrong change</td><td>none</td><td>Cluster down, no storage I/O</td><td>Restore one switch; everything restarts itself</td></tr>
+<tr><td>Management switch</td><td>Failure</td><td>none (data unaffected)</td><td>No SSH on admin, no ILOM, no ASR</td><td>Replace; use client network for SSH meanwhile</td></tr>
+<tr><td>PDU / one circuit</td><td>Loss</td><td>Second PDU</td><td>PSU fault on every node</td><td>Fix feed; no maintenance until then</td></tr>
+<tr><td>Both circuits</td><td>Loss</td><td>none</td><td>Rack dark</td><td>Restore power; verify CRS and ASM mount; check SEL</td></tr>
+<tr><td>Cooling</td><td>Inlet temperature rises</td><td>Fans at full; ILOM thermal shutdown</td><td>CL_TEMP / DS_TEMP metrics, ILOM warnings</td><td>Fix cooling before powering on again</td></tr>
+<tr><td>Client switches</td><td>Loss</td><td>Bond failover across two switches</td><td>bondeth0 slave down; SCAN unreachable if both</td><td>Network team; database is unaffected</td></tr>
+<tr><td>Time (NTP)</td><td>Drift</td><td>Clusterware tolerates small skew</td><td>CTSS in observer mode, alert log warnings</td><td>Fix NTP; large skew can evict</td></tr>
+</tbody></table></div>`}
+];
+
+THEORY.lab=[
+{lvl:'Basics',title:'Capacity vocabulary',src:'doc',html:`
+<ul>
+<li><b>Raw</b>: the sum of primary storage devices (HDD on HC/XT, capacity flash on EF). Marketing TB (10<sup>12</sup>) — a "22 TB" disk is about 20.0 TiB in cellcli.</li>
+<li><b>Mirrored</b>: raw ÷ copies (3 for HIGH, 2 for NORMAL).</li>
+<li><b>Usable</b>: mirrored minus the free space ASM must keep to re-protect after a failure (rule of thumb 15 %; the real number is <code>REQUIRED_MIRROR_FREE_MB</code>).</li>
+<li><b>DATA vs RECO</b>: a split of usable, decided by where backups live — 80:20 when backups go off the machine, about 40:60 when the fast recovery area holds them.</li>
+<li><b>Flash</b> and <b>XRMEM</b> are caches, not capacity; they size the working set that runs at flash or memory speed.</li>
+<li><b>Cores</b>: 192 per X11M database server, licensed per enabled core; cells' 64 cores are not database cores.</li>
+</ul>`},
+{lvl:'Working knowledge',title:'A sizing method',src:'field',html:`
+<ol>
+<li><b>Characterise the workload</b>, not the current hardware: peak and average IOPS by size (8 KB random vs 1 MB sequential), MB/s of scan, redo rate (MB/s at peak), database size and growth, number of databases and their SLAs. AWR from the current systems is the source; ignore CPU utilisation on the old platform — Exadata changes it.</li>
+<li><b>Pick the cell type.</b> HC for mixed workloads and anything with a large cold tail; EF when the whole working set must be at flash latency or write rates are extreme; XT for archive, backup copies and low-priority databases, possibly shared across clusters with ASM-scoped security.</li>
+<li><b>Choose redundancy.</b> HIGH for DATA unless you can argue otherwise in writing. NORMAL for RECO only when backups exist elsewhere.</li>
+<li><b>Count cells from the binding constraint</b>: usable capacity after redundancy and reserve, scan throughput (cells scale linearly), or IOPS for the part of the working set that misses flash. Add one cell for growth and one for re-protection headroom on small racks.</li>
+<li><b>Size flash and XRMEM against the hot set</b>: the sum of the busiest segments and indexes across all databases should fit in the cells' flash with room for columnar cache; the hottest few percent should fit XRMEM.</li>
+<li><b>Count database servers from CPU and memory</b>: total SGA + PGA + hypervisor, and licensed cores at a realistic utilisation ceiling (plan for 60–70 % at peak, not 100 %). Use CoD to start small.</li>
+<li><b>Model the failures</b> before signing: the Break the Rack tab with your chosen configuration — one cell down during a patch window, a disk on another cell four hours later.</li>
+<li><b>Validate with Oracle</b>: OEDA for the layout, Oracle's sizing team for the numbers. The lab on this page gives proportions, not quotes.</li>
+</ol>`}
+];
+</script>
+<script>
+Object.assign(TABS,{
+cmds:{
+  eyebrow:"Reference · every command on this site", h1:"Commands", nostage:true,
+  lede:"", parts:[],scenarios:[], doc:""
+},
+migrate:{
+  eyebrow:"Run it · adopting the platform", h1:"Moving to Exadata", nostage:true,
+  lede:"How databases get onto an Exadata, what you change on arrival, and what to measure in the first month.",
+  parts:[],scenarios:[],
+  doc:`<h2>What kind of migration this is</h2>
+<p>Moving a database to Exadata is a <b>platform</b> migration, not a database migration: same Oracle Database software, same SQL, same application. What changes is everything underneath — storage becomes ASM on cells with a different redundancy model, the interconnect becomes RoCE, the OS becomes Oracle's image, and full scans become cheap. The database techniques are the standard ones; the decisions are about downtime, endianness, version change and how much of the old tuning to leave behind.</p>
+<h2>Choosing the method</h2>
+<div class="scroll"><table><thead><tr><th>Method</th><th>Downtime</th><th>Crosses platform / endianness</th><th>Changes version</th><th>Use when</th><th>Watch out for</th></tr></thead><tbody>
+<tr><td><b>Data Guard physical standby</b> → switchover</td><td>Minutes</td><td>Same endianness only (Linux x86 ↔ Linux x86; some Windows/Linux combos)</td><td>Same version; upgrade afterwards, or transient logical standby</td><td>Source is already Linux x86-64; large databases; rehearsals wanted</td><td>Standby on Exadata must be on ASM with OMF; redo transport over the client network; keep the old primary as fallback for a week</td></tr>
+<tr><td><b>Zero Downtime Migration (ZDM)</b> physical</td><td>Minutes (online) or hours (offline)</td><td>Same as Data Guard / RMAN underneath</td><td>Optional post-upgrade step</td><td>Repeatable, automated, many databases; cloud targets</td><td>ZDM host and SSH access to both sides; it automates Data Guard/RMAN, it does not change the physics</td></tr>
+<tr><td><b>RMAN restore / duplicate</b> (backup-based)</td><td>Hours (size-bound) unless incremental-forever applied</td><td>Same endianness</td><td>Same version, then upgrade</td><td>Simple, no network link needed between sites</td><td>Datafile renaming into ASM (<code>SET NEWNAME</code> / OMF); test the restore time before promising a window</td></tr>
+<tr><td><b>Cross-platform transportable tablespaces (XTTS)</b> with incremental backups</td><td>Hours → minutes with incremental roll-forward</td><td>Yes — AIX, Solaris SPARC, HP-UX (big-endian) → Linux</td><td>Yes (plug into a newer release)</td><td>The classic Unix-to-Exadata move</td><td>Metadata export/import of everything outside the tablespaces (users, grants, PL/SQL, sequences); self-contained tablespace check; downtime for the final incremental + metadata</td></tr>
+<tr><td><b>Full Transportable Export/Import</b></td><td>Hours</td><td>Yes</td><td>Yes</td><td>Mid-sized databases from any platform, one command set</td><td>Same metadata caveats as XTTS; all-or-nothing</td></tr>
+<tr><td><b>Data Pump</b></td><td>Long (size-bound)</td><td>Yes</td><td>Yes</td><td>Small databases, character-set changes, re-organisation wanted</td><td>Slowest; good moment to drop junk and re-partition</td></tr>
+<tr><td><b>GoldenGate</b> (optionally via ZDM logical online)</td><td>Near zero</td><td>Yes</td><td>Yes</td><td>Strict downtime limits, phased cut-over, fallback by reverse replication</td><td>Licence, unsupported data types, sequence handling, validation effort</td></tr>
+</tbody></table></div>
+<p>Rule of thumb: Linux source → Data Guard (or ZDM driving it). Big-endian Unix source → XTTS with incrementals. Anything small or messy → Data Pump and take the chance to clean up. Zero downtime demanded → GoldenGate, and budget for the validation.</p>
+<h2>Cut-over checklist</h2>
+<ol>
+<li>Version matrix: target GI/DB release supported by the Exadata System Software release (MOS 888828.1); source compatible with the method.</li>
+<li>Sizing done with the Configuration Lab and confirmed by Oracle; redundancy decided and written down.</li>
+<li>Character set, time zone file version, endianness, <code>compatible</code> known for every database.</li>
+<li>Inventory of hard-coded things: datafile paths in scripts, directory objects, external tables, UTL_FILE locations, DBFS/ACFS needs, wallets, cron jobs, OEM targets.</li>
+<li>Connection strings moved to SCAN with services; FAN/Application Continuity enabled where the client stack allows.</li>
+<li>Backups redesigned for the new platform (RMAN to RECO / ZFS / ZDLRA) and tested before cut-over, not after.</li>
+<li>Parameter inventory diffed: which old parameters were workarounds for the old storage (see the Working knowledge section) and will not be carried over.</li>
+<li>Rehearsal with timings; fallback defined (old primary kept, reverse Data Guard, or export).</li>
+<li>Post-migration: statistics, system statistics in Exadata mode, invisible-index review, first exachk, OEM/ASR confirmed.</li>
+</ol>`
+}
+});
+THEORY.migrate=[
+{lvl:'Basics',title:'What changes for the database on arrival',src:'doc',html:`
+<ul>
+<li><b>Storage paths.</b> Datafiles become Oracle Managed Files in +DATA, recovery files in +RECO. Anything that named a file system path — scripts, directory objects, external tables — needs an ASM or ACFS equivalent (ACFS on Exadata is supported for file-based needs such as GoldenGate trail files or application files).</li>
+<li><b>Full scans stop being the enemy.</b> Smart Scan, storage indexes and HCC make scan-heavy plans cheap; indexes that existed only to avoid scans on slow storage become candidates for removal. The optimizer does not know this until you tell it (system statistics) and gather fresh object statistics.</li>
+<li><b>Single-block reads get faster, not slower.</b> OLTP paths hit XRMEM and flash; sub-millisecond averages are the expectation, so old latency thresholds in monitoring need resetting.</li>
+<li><b>RAC becomes the default shape.</b> Even a single database usually runs as two instances; services, FAN and connection strings must be RAC-ready (the <a href="index.html">RAC site</a> covers that half).</li>
+<li><b>Patching becomes a platform event.</b> Five layers on a quarterly cadence, scheduled with the Exadata team rather than per database.</li>
+<li><b>Capacity is shared.</b> IORM, flash quotas and Resource Manager replace "that database has its own LUNs" as the way to protect one workload from another.</li>
+</ul>`},
+{lvl:'Working knowledge',title:'Parameters and best practices on day one',src:'field',html:`
+<p>Most of this is what exachk checks for; the master reference is Oracle's Exadata best-practices documentation on My Oracle Support (start from note 757552.1 and the exachk report itself). Treat the list as "know why each one is here", not as a script to run.</p>
+<div class="scroll"><table><thead><tr><th>Area</th><th>Setting or practice</th><th>Why on Exadata</th></tr></thead><tbody>
+<tr><td>Offload</td><td><code>cell_offload_processing=TRUE</code> (default); never set <code>_serial_direct_read</code> system-wide in production</td><td>Smart Scan on by default; direct-read heuristics should decide per segment, forcing it hurts OLTP</td></tr>
+<tr><td>Memory</td><td><code>sga_target</code> / <code>pga_aggregate_target</code> sized explicitly; no <code>memory_target</code>; <code>use_large_pages=ONLY</code></td><td>Huge pages are configured by OEDA; AMM cannot use them; ONLY makes a misconfiguration fail fast instead of silently running without huge pages</td></tr>
+<tr><td>I/O sizing</td><td>Leave <code>db_file_multiblock_read_count</code> unset; <code>db_block_checksum=TYPICAL</code>; <code>db_lost_write_protect=TYPICAL</code> with Data Guard</td><td>Exadata issues 1 MB reads itself; checksums are cheap here and protect against the rare cell/flash corruption; lost-write detection is the standby's job</td></tr>
+<tr><td>Files</td><td><code>db_create_file_dest=+DATA</code>, <code>db_recovery_file_dest=+RECO</code>, bigfile tablespaces with autoextend; <code>_file_size_increase_increment</code> per exachk recommendation</td><td>OMF on ASM; large autoextend steps avoid frequent small growth operations against ASM</td></tr>
+<tr><td>Parallelism</td><td><code>parallel_degree_policy</code> decided deliberately (AUTO or MANUAL), <code>parallel_max_servers</code> bounded for 192 cores, <code>parallel_force_local</code> considered for RAC</td><td>Scan capacity is enormous; uncontrolled parallelism now exhausts database-server CPU rather than storage</td></tr>
+<tr><td>Interconnect</td><td>Do not set <code>cluster_interconnects</code></td><td>Grid Infrastructure configures the RoCE interfaces; HAIP is not used</td></tr>
+<tr><td>Statistics</td><td><code>DBMS_STATS.GATHER_SYSTEM_STATS('EXADATA')</code> once; fresh object stats after load</td><td>Exadata mode tells the optimizer the real multiblock read size and makes it favour full scans where they are now cheaper</td></tr>
+<tr><td>Flash</td><td>Confirm <code>flashCacheMode=WriteBack</code> on every cell; pin only after observing (<code>CELL_FLASH_CACHE KEEP</code>)</td><td>Write-back is the expected mode; premature KEEP decisions waste cache</td></tr>
+<tr><td>IORM</td><td><code>objective=auto</code>; a dbplan with shares as soon as a second database arrives</td><td>Protection has to exist before the contention does</td></tr>
+<tr><td>Indexes</td><td>Make scan-avoidance indexes INVISIBLE first; drop after a full business cycle without regressions</td><td>Smart Scan removes the need for many of them, but not all — and the batch at quarter-end is the test</td></tr>
+<tr><td>Compression</td><td>HCC QUERY HIGH for partitions older than the active window, via ADO policies; OLTP compression needs Advanced Compression</td><td>Storage and scan time both drop; keep active partitions uncompressed or row-compressed</td></tr>
+<tr><td>Backups</td><td>RMAN with <code>SECTION SIZE</code>, enough channels, block change tracking; compression in RMAN or on ZDLRA</td><td>Cells filter incremental blocks; parallel sections use the throughput; cells do not compress backups</td></tr>
+<tr><td>Monitoring</td><td>OEM Exadata plug-in, ASR verified, exachk monthly and before/after patches, alert thresholds reset for Exadata latencies</td><td>The platform reports more than a SAN ever did; use it</td></tr>
+</tbody></table></div>
+<div class="lbl">See it</div>
+<pre>SELECT name,value,isdefault FROM v$parameter WHERE name IN ('cell_offload_processing','use_large_pages','db_block_checksum','db_lost_write_protect','parallel_degree_policy','parallel_max_servers','parallel_force_local','db_create_file_dest','db_recovery_file_dest','cluster_interconnects','memory_target','sga_target','pga_aggregate_target');
+EXEC DBMS_STATS.GATHER_SYSTEM_STATS('EXADATA');
+SELECT pname,pval1 FROM sys.aux_stats$ WHERE sname='SYSSTATS_MAIN';
+cellcli -e list cell attributes name,flashCacheMode
+ALTER INDEX sales_cust_ix INVISIBLE;   -- watch v$sql plans for a cycle before DROP</pre>`},
+{lvl:'Internals',title:'The first month: what to measure, and the anti-patterns',src:'field',html:`
+<h3>Measure</h3>
+<ul>
+<li><b>Offload efficiency per SQL</b>: <code>IO_CELL_OFFLOAD_ELIGIBLE_BYTES</code> vs <code>IO_INTERCONNECT_BYTES</code> in <code>v$sql</code> for the top statements by I/O; anything with eligible = 0 that scans a big table is a candidate for investigation (Storage Server tab → "Why it doesn't offload").</li>
+<li><b>Wait-event averages</b>: cell single block physical read should average well under a millisecond; cell multiblock physical read at volume means buffered scans that are not offloading; cell smart table scan is the good one.</li>
+<li><b>AWR's Exadata section</b>: cell-level statistics, flash cache hit rates, Smart Scan summary, IORM waits and top databases by cell I/O — the first place to look when "it was faster on the old box" arrives.</li>
+<li><b>Cell CPU and reverse offload</b>: CL_CPUT per cell and "cell physical IO bytes sent directly to DB node to balance CPU"; sustained values mean the cells, not the database servers, are the limit.</li>
+<li><b>Flash cache hit ratio</b> per cell and per database (FC_IO_BY_R vs FC_IO_BY_R_MISS, DB_FC_IO_BY_SEC), and XRMEM hits; a cold cache after migration takes hours to warm — judge after a business day, not after the first batch.</li>
+<li><b>IORM</b>: DB_IO_WT_* per database; zero means no contention yet, which is the time to set the plan.</li>
+<li><b>Redo</b>: log file parallel write average and redo MB/s against what Flash Log / XRMEM log should give (sub-millisecond).</li>
+<li><b>Plan changes</b>: SQL Plan Management baselines captured before migration make regressions visible and reversible.</li>
+</ul>
+<h3>Anti-patterns seen in the field</h3>
+<ul>
+<li>Carrying every hint, outline and hidden parameter from the old platform — most existed to defeat slow storage.</li>
+<li>Forcing parallelism everywhere because "Exadata is for parallel" — database-server CPU becomes the bottleneck and IORM cannot help with CPU.</li>
+<li>Dropping indexes on day one. Make them invisible; drop after a full cycle.</li>
+<li>Choosing NORMAL redundancy to buy capacity on a small rack, then discovering during the first cell patch what "unprotected while a cell is out" means.</li>
+<li>Leaving flash cache in write-through, or pinning half the database with KEEP before measuring.</li>
+<li>No IORM plan on a consolidated rack until the first incident, then writing one in anger.</li>
+<li>Treating the fabric as the network team's: changing a leaf port or a VLAN by hand, and finding out through RDS retransmits three weeks later.</li>
+<li>Skipping system statistics in Exadata mode, then wondering why the optimizer still prefers index range scans over the cells' full scans.</li>
+</ul>`}
+];
+</script>
+<script>
 // ===== 3D ENGINE =====
 const C={chassis:0xe9ecef,chassisDk:0x3a4047,bezel:0x23272c,red:0xc42b1c,blue:0x0a5fc2,green:0x1d8f4e,amber:0xa86a00,grey:0x9aa3ad,light:0xf6f7f8,steel:0xb8c0c8,flash:0xffb347,hdd:0x6e7a86,mem:0x2f6db3,cpu:0x1f2429,ghost:0xcfd5db};
 const STATE_COL={hl:0x0a5fc2,bad:0xc42b1c,warn:0xa86a00,ok:0x1d8f4e,hover:0x4a8de0,pin:0x0a5fc2};
@@ -869,7 +1442,9 @@ class Stage{
     this.root=new THREE.Group();this.scene.add(this.root);
     this.orbit={theta:.7,phi:1.15,r:24,tgt:new THREE.Vector3(0,5,0)};this.home={...this.orbit,tgt:this.orbit.tgt.clone()};
     this.onPick=null;this.onHover=null;
-    try{this.renderer=new THREE.WebGLRenderer({antialias:true,alpha:false});this.renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,2));}
+    try{const cv=document.createElement('canvas');let ctx=null;for(const n of ['webgl2','webgl','experimental-webgl']){try{ctx=cv.getContext(n,{antialias:true,alpha:false,powerPreference:'high-performance'});}catch(e){}if(ctx)break;}
+      if(!ctx)throw new Error('no WebGL context');
+      this.renderer=new THREE.WebGLRenderer({canvas:cv,context:ctx,antialias:true,alpha:false});this.renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,2));}
     catch(e){this.dead=true;const d=document.createElement('div');d.style.cssText='position:absolute;inset:0;display:grid;place-items:center;padding:24px;text-align:center;font:500 14px/1.6 var(--body);color:var(--mute);background:#fff';d.innerHTML='<div><b style="font:700 18px var(--display);color:var(--ink)">3D needs WebGL</b><br>This viewer has no WebGL, so the model cannot draw here. Everything else on the page works; open the file in Safari or Chrome to see the model.</div>';el.appendChild(d);return;}
     el.insertBefore(this.renderer.domElement,el.firstChild);
     this.scene.add(new THREE.HemisphereLight(0xffffff,0xb0b8c0,1.05));
@@ -1055,7 +1630,7 @@ cell(st,variant='HC'){
   else{const g=new THREE.Group();for(let r=0;r<3;r++)for(let c=0;c<4;c++){const n=box(1.6,.55,3.4,variant==='XT'?C.steel:C.hdd);n.position.set(-W/2+1.3+c*2.1,.5+r*.62,D/2-1.9);g.add(n);}st.add('hdd',g,[0,1.5,3]);}
   const ncpu=variant==='XT'?1:2;for(let i=0;i<ncpu;i++){const g=new THREE.Group();g.add(at(box(1.6,.12,1.6,C.cpu),0,0,0));const hs=box(1.9,.8,1.9,C.steel,{edges:false});hs.position.y=.5;g.add(hs);g.position.set(ncpu===1?0:(-1.8+i*3.6),.3,-0.6);st.add(i===0?'ccpu':'ccpu2',g,[0,2.2,0],{alias:'ccpu'});}
   const dim=new THREE.Group();const banks=variant==='XT'?[-3.4,3.4]:[-3.8,-0.4,1.0,3.8];banks.forEach((x,b)=>{for(let i=0;i<6;i++){const d=box(.1,.9,1.6,variant==='XT'?C.mem:0x1b4f8a,{edges:false});d.position.set(x+(b<banks.length/2?-i*.2:i*.2),.7,-0.6);dim.add(d);}});st.add('cdimm',dim,[0,3,0]);
-  const fl=new THREE.Group();for(let i=0;i<4;i++){const f=box(.14,1.1,2.4,C.flash);f.position.set(-W/2+1.2+i*.9,.9,-D/2+2.4);fl.add(f);}st.add('flash',fl,[-1.5,2.6,-2.5]);
+  const fl=new THREE.Group();for(let i=0;i<(variant==='XT'?2:4);i++){const f=box(.14,1.1,2.4,C.flash);f.position.set(-W/2+1.2+i*.9,.9,-D/2+2.4);fl.add(f);}st.add('flash',fl,[-1.5,2.6,-2.5]);
   const hba=box(.14,1,2,0x7b4a9d);hba.position.set(.6,.85,-D/2+2.4);st.add('hba',hba,[0,2.6,-2.5]);
   const cx=box(.14,1,2.2,C.blue);cx.position.set(1.6,.85,-D/2+2.4);st.add('ccx7',cx,[1.2,2.6,-2.5]);
   const sys=new THREE.Group();for(let i=0;i<2;i++){const n=box(.7,.4,2.2,C.bezel);n.position.set(2.6+i*.9,.3,-D/2+2.5);sys.add(n);}st.add('sysnvme',sys,[1.6,1.4,-2.5]);
@@ -1187,7 +1762,7 @@ function go(sec){cur=sec;const T=TABS[sec];renderNav();$('#eyebrow').textContent
   else if(isLab){buildLab();}
   else if(T.custom==='brk'){brStart();}
   else{if(sec==='cell'){MODELS.cell(stage,cellVariant);renderVariantCtl();}else MODELS[sec](stage);renderList();renderScenarios();inspect(null);}
-  $('#sec-doc').innerHTML=T.doc||'';$('#sec-doc').style.marginTop=noStage?'0':'22px';setHash(sec);try{window.scrollTo({top:0});}catch(e){}
+  $('#sec-doc').innerHTML=(T.build?T.build():T.doc)||'';$('#sec-doc').style.marginTop=noStage?'0':'22px';renderTheory(sec);setHash(sec);try{window.scrollTo({top:0});}catch(e){}
 }
 function renderVariantCtl(){const c=$('#ctl');c.innerHTML='';TABS.cell.variants.forEach(v=>{const b=document.createElement('button');b.className='btn exa';b.textContent=v;b.title=v==='HC'?'High Capacity':v==='EF'?'Extreme Flash':'Extended';b.setAttribute('aria-pressed',String(v===cellVariant));b.onclick=()=>{cellVariant=v;stopScenario();stage.clear();MODELS.cell(stage,v);renderVariantCtl();$('#b-explode').setAttribute('aria-pressed','false');inspect(stage.pinned);};c.appendChild(b);});}
 function renderList(){const L=$('#clist');L.innerHTML='';let cat=null;TABS[cur].parts.forEach(p=>{if(p.cat!==cat){cat=p.cat;const h=document.createElement('div');h.className='cg';h.textContent=cat;L.appendChild(h);}
@@ -1196,6 +1771,11 @@ function pin(id){stage.setPinned(id);inspect(id);setHash(cur+'/'+id);document.qu
   const b=document.querySelector(`#clist button[data-id="${id}"]`);if(b)b.scrollIntoView({block:'nearest'});}
 function inspect(id){const I=$('#insp');const p=partById(id);if(!p){I.innerHTML=`<div class="kick">Inspector</div><h2>Nothing pinned</h2><p>Hover a part on the model to read it, click to pin it here. The list on the left groups every part and concept of this tab. Green dot = from Oracle's X11M documentation; amber dot = field knowledge.</p>`;return;}
   I.innerHTML=`<div class="kick">${esc(p.cat)}</div><h2>${esc(p.name)}</h2><span class="src ${p.src}">${p.src==='doc'?'Oracle documentation':'Field knowledge · verify'}</span><p>${esc(p.desc)}</p><div class="lbl">Link to this part</div><pre class="out" style="max-height:none">${esc(pageUrl())}#${cur}/${p.id}</pre><div class="lbl">Check it</div><pre>${esc(p.cmd||'')}</pre>${p.out?`<div class="lbl">What it looks like <small>(sanitised, values illustrative)</small></div><pre class="out">${esc(p.out)}</pre>`:''}`;}
+function renderTheory(sec){const S=$('#sec-theory');const list=(typeof THEORY!=='undefined'&&THEORY[sec])||[];if(!list.length){S.innerHTML='';S.hidden=true;return;}S.hidden=false;
+  const lvc={'Basics':'l1','Working knowledge':'l2','Internals':'l3'};
+  S.innerHTML=`<div class="thead"><h2>Theory</h2><span class="note">${list.length} section${list.length>1?'s':''} · Basics → Working knowledge → Internals · green = Oracle documentation, amber = field knowledge, verify</span><button class="btn" id="th-all">Expand all</button></div>`+
+    list.map((t,i)=>`<details ${i===0?'open':''} id="th-${sec}-${i}"><summary><span class="lv ${lvc[t.lvl]||''}">${esc(t.lvl)}</span><span>${esc(t.title)}</span><span class="src ${t.src}">${t.src==='doc'?'Oracle documentation':'Field knowledge · verify'}</span></summary><div class="tbody">${t.html}</div></details>`).join('');
+  const b=$('#th-all');b.onclick=()=>{const ds=[...S.querySelectorAll('details')];const open=ds.some(d=>!d.open);ds.forEach(d=>d.open=open);b.textContent=open?'Collapse all':'Expand all';};}
 function esc(s){return String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));}
 function pageUrl(){try{return /^https?:/.test(location.href)?location.href.split('#')[0]:'exadata.html';}catch(e){return 'exadata.html';}}
 stage.onPick=id=>{if(cur==='brk'){brToggle(id);return;}const base=id.replace(/_lid$/,'');if(partById(base))pin(base);};
@@ -1219,12 +1799,12 @@ $('#s-next').onclick=()=>{if(!scen)return;if(scenIdx<scen.steps.length-1){scenId
 $('#s-stop').onclick=stopScenario;
 
 // lab
-const SPEC={hcRaw:12*22,efRaw:4*30.72,xtRaw:12*22,flash:4*6.8,xrmemHC:1.25,xrmemEF:1.25,xrmemXT:0};
+const SPEC={hcRaw:12*22,efRaw:4*30.72,xtRaw:12*22,flash:4*6.8,flashXT:2*6.8,xrmemHC:1.25,xrmemEF:1.25,xrmemXT:0};
 function labCfg(){const n=id=>Math.max(0,parseInt($(id).value||'0',10));return{db:Math.min(15,Math.max(2,n('#l-db'))),mem:n('#l-mem'),hc:n('#l-hc'),ef:n('#l-ef'),xt:n('#l-xt'),red:$('#l-red').value,split:n('#l-split')};}
 function buildLab(){const c=labCfg();const cells=c.hc+c.ef+c.xt;const err=$('#l-err');err.textContent='';
   if(cells<3)err.textContent='Minimum 3 storage servers (three ASM failure groups).';else if(cells>17)err.textContent='Maximum 17 storage servers in one rack.';else if(c.db+cells>19)err.textContent=`Maximum 19 servers per rack; you have ${c.db+cells}.`;
   stage.clear();MODELS.lab(stage,{db:c.db,hc:Math.min(c.hc,17),ef:Math.min(c.ef,17-Math.min(c.hc,17)),xt:Math.min(c.xt,17-Math.min(c.hc+c.ef,17))});
-  const copies=c.red==='high'?3:2;const raw=c.hc*SPEC.hcRaw+c.ef*SPEC.efRaw+c.xt*SPEC.xtRaw;const usable=raw/copies*.85;const flash=cells*SPEC.flash;const xr=c.hc*SPEC.xrmemHC+c.ef*SPEC.xrmemEF;const mem=c.db*c.mem/1024;const cores=c.db*192;
+  const copies=c.red==='high'?3:2;const raw=c.hc*SPEC.hcRaw+c.ef*SPEC.efRaw+c.xt*SPEC.xtRaw;const usable=raw/copies*.85;const flash=(c.hc+c.ef)*SPEC.flash+c.xt*SPEC.flashXT;const xr=c.hc*SPEC.xrmemHC+c.ef*SPEC.xrmemEF;const mem=c.db*c.mem/1024;const cores=c.db*192;
   const k=[[Math.round(raw)+' TB','raw primary storage'],[Math.round(usable)+' TB','usable (after copies, 15 % reserve)'],[Math.round(usable*c.split/100)+' TB','+DATA usable'],[Math.round(usable*(100-c.split)/100)+' TB','+RECO usable'],[flash.toFixed(1)+' TB','performance flash'],[xr.toFixed(2)+' TB','XRMEM cache'],[mem.toFixed(1)+' TB','database server memory'],[cores,'database cores (192 per server)'],[c.db+cells,'servers of 19 max']];
   $('#kpis').innerHTML=k.map(([v,l])=>`<div class="kpi"><b>${v}</b><span>${l}</span></div>`).join('');
   const rows=[['One storage server down',copies===3?'Survives; two copies remain':'Survives; one copy remains — exposed'],['Storage server down + one disk elsewhere',copies===3?'Survives':'Data loss possible'],['Two storage servers down',copies===3&&cells>=5?'Survives (if free space allows rebalance)':copies===3?'Survives for reads; cannot re-protect on 3 cells':'Data loss'],['One database server down',c.db>1?`Survives; ${c.db-1} remain`:'Outage'],['RoCE leaf switch down','Survives; fabric at 100 Gb per server'],['One PDU / power feed down','Survives; all components dual-PSU'],['Rolling cell patching',copies===3?'Stays protected throughout':'Unprotected while each cell is out']];
@@ -1372,6 +1952,72 @@ function brRender(){
   ${clocks.length?`<div class="lbl">ASM clocks at T + ${BR.time} h</div><ul class="brl">${clocks.map(c=>`<li>${esc(c)}</li>`).join('')}</ul>`:''}
   <div class="lbl">What to do now · field view</div><ul class="brl">${brAdvice(E).map(a=>`<li>${esc(a)}</li>`).join('')}</ul>`;
 }
+
+// ===== SEARCH + COMMANDS (inside init: has $, esc, go, pin, startScenario, TABS, THEORY) =====
+const TABLABEL={};document.querySelectorAll('#side button[data-sec]').forEach(b=>TABLABEL[b.dataset.sec]=b.querySelector('span:last-child').textContent);
+const TABORDER=[...document.querySelectorAll('#side button[data-sec]')].map(b=>b.dataset.sec);
+function htmlText(h){const t=document.createElement('div');t.innerHTML=h||'';return (t.textContent||'').replace(/\s+/g,' ').trim();}
+let SIDX=null;
+function buildIndex(){SIDX=[];
+  TABORDER.forEach(tab=>{const T=TABS[tab];if(!T)return;
+    (T.parts||[]).forEach(p=>SIDX.push({tab,type:'part',id:p.id,title:p.name,text:[p.cat,p.desc,p.cmd,p.out].filter(Boolean).join(' ')}));
+    (T.scenarios||[]).forEach(s=>SIDX.push({tab,type:'scenario',id:s.id,title:s.name,text:s.steps.map(x=>x.t+' '+x.p).join(' ')}));
+    if(T.doc)SIDX.push({tab,type:'doc',id:'doc',title:TABLABEL[tab]+' — page text',text:htmlText(T.doc)});
+    ((typeof THEORY!=='undefined'&&THEORY[tab])||[]).forEach((t,i)=>SIDX.push({tab,type:'theory',id:i,title:t.title,text:t.lvl+' '+htmlText(t.html)}));
+  });}
+function snippet(text,terms){const lo=text.toLowerCase();let pos=-1;for(const t of terms){const i=lo.indexOf(t);if(i>=0&&(pos<0||i<pos))pos=i;}if(pos<0)return text.slice(0,140);const a=Math.max(0,pos-60),b=Math.min(text.length,pos+100);return (a>0?'…':'')+text.slice(a,b)+(b<text.length?'…':'');}
+function hl(s,terms){let out=esc(s);terms.forEach(t=>{const re=new RegExp('('+t.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','ig');out=out.replace(re,'<mark>$1</mark>');});return out;}
+function doSearch(q){const R=$('#qres');q=q.trim().toLowerCase();if(q.length<2){R.hidden=true;R.innerHTML='';return;}if(!SIDX)buildIndex();
+  const terms=q.split(/\s+/).filter(Boolean);
+  const hits=[];for(const e of SIDX){const tl=e.title.toLowerCase(),tx=e.text.toLowerCase();if(!terms.every(t=>tl.includes(t)||tx.includes(t)))continue;const score=terms.reduce((s,t)=>s+(tl.includes(t)?10:0)+(e.type==='part'?2:e.type==='theory'?1:0),0);hits.push({e,score});}
+  hits.sort((a,b)=>b.score-a.score||TABORDER.indexOf(a.e.tab)-TABORDER.indexOf(b.e.tab));
+  const top=hits.slice(0,40);
+  R.innerHTML=top.length?`<div class="qh">${hits.length} match${hits.length===1?'':'es'}${hits.length>40?' · showing 40':''} · Enter opens the first · Esc closes</div>`+top.map((h,i)=>`<button class="qr" data-i="${i}"><span class="qt ${h.e.type}">${h.e.type}</span><span class="qtab">${esc(TABLABEL[h.e.tab]||h.e.tab)}</span><b>${hl(h.e.title,terms)}</b><small>${hl(snippet(h.e.text,terms),terms)}</small></button>`).join(''):'<div class="qh">No matches.</div>';
+  R.hidden=false;
+  R.querySelectorAll('.qr').forEach(b=>b.onclick=()=>openHit(top[+b.dataset.i].e));
+  R.dataset.first=top.length?'1':'';R._top=top;}
+function openHit(e){$('#qres').hidden=true;$('#q').blur();go(e.tab);
+  if(e.type==='part'){setTimeout(()=>pin(e.id),50);}
+  else if(e.type==='scenario'){setTimeout(()=>{startScenario(e.id);$('.scen').scrollIntoView({behavior:'smooth',block:'start'});},80);}
+  else if(e.type==='theory'){setTimeout(()=>{const d=document.getElementById('th-'+e.tab+'-'+e.id);if(d){d.open=true;d.scrollIntoView({behavior:'smooth',block:'start'});}},80);}
+  else{setTimeout(()=>$('#sec-doc').scrollIntoView({behavior:'smooth',block:'start'}),80);}}
+const qel=$('#q');qel.addEventListener('input',()=>doSearch(qel.value));
+qel.addEventListener('keydown',ev=>{if(ev.key==='Escape'){$('#qres').hidden=true;qel.value='';}if(ev.key==='Enter'){const R=$('#qres');if(R._top&&R._top.length)openHit(R._top[0].e);}});
+document.addEventListener('click',ev=>{if(!ev.target.closest('.search'))$('#qres').hidden=true;});
+document.addEventListener('keydown',ev=>{if(ev.key==='/'&&!/input|textarea|select/i.test(document.activeElement.tagName)){ev.preventDefault();qel.focus();}});
+
+// ---- Commands cheat sheet, generated from every "Check it" and "See it" block ----
+const TOOLS=[
+ ['cellcli','cellcli — storage server',/^(cellcli|CellCLI>)/i],
+ ['dbmcli','dbmcli — database server management',/^(dbmcli|DBMCLI>)/i],
+ ['patchmgr','patchmgr / dbnodeupdate — patching',/^(\.\/)?(patchmgr|dbnodeupdate)/i],
+ ['dcli','dcli / exadcli — fleet commands',/^(dcli|exadcli)\b/i],
+ ['image','imageinfo / imagehistory — image',/^(imageinfo|imagehistory)\b/i],
+ ['gi','Grid Infrastructure — asmcmd, crsctl, srvctl, oifcfg',/^(asmcmd|ASMCMD>|crsctl|srvctl|olsnodes|ocrcheck|oifcfg|lsnrctl|quorumdiskmgr|\/opt\/oracle\.SupportTools\/quorumdiskmgr)/i],
+ ['sql','SQL — v$ views, ASM, parameters',/^(select|alter|show|create|exec|sqlplus|@|set |grant|drop|with )/i],
+ ['diag','Diagnostics — exachk, AHF, sundiag, infinicheck, ExaWatcher',/^(exachk|tfactl|ahfctl|sundiag|\/opt\/oracle\.SupportTools\/(sundiag|ibdiagtools)|infinicheck|GetExaWatcher|ls \/opt\/oracle\.ExaWatcher|cat \/opt\/oracle\.SupportTools)/i],
+ ['kvm','KVM — vm_maker, virsh',/^(vm_maker|virsh)\b/i],
+ ['ilom','ILOM — ipmitool, ssh to the service processor',/^(ipmitool|ssh\s+\S*ilom|ssh root@<ilom)/i],
+ ['switch','RoCE switch — NX-OS',/^show\s+(version|interface|lldp|port-channel|queuing|logging)/i],
+ ['os','Operating system — Linux',/./]
+];
+function classify(line){const l=line.trim();for(const [k,,re] of TOOLS){if(re.test(l))return k;}return 'os';}
+function buildCmds(){const groups={};TOOLS.forEach(([k,label])=>groups[k]={label,items:[],seen:new Set()});
+  const add=(text,tab,linkHash,linkLabel)=>{const lines=text.split('\n');let caption=[];
+    for(const raw of lines){const l=raw.replace(/\s+$/,'');if(!l.trim())continue;
+      if(/^\s*(#|--|REM)/.test(l)){caption.push(l.trim());continue;}
+      const k=classify(l);const key=l.trim();if(groups[k].seen.has(key)){caption=[];continue;}groups[k].seen.add(key);
+      groups[k].items.push({cmd:l.trim(),cap:caption.join(' '),tab,linkHash,linkLabel});caption=[];}};
+  TABORDER.forEach(tab=>{const T=TABS[tab];if(!T)return;(T.parts||[]).forEach(p=>{if(p.cmd)add(p.cmd,tab,'#'+tab+'/'+p.id,p.name);});
+    ((typeof THEORY!=='undefined'&&THEORY[tab])||[]).forEach((t,i)=>{const d=document.createElement('div');d.innerHTML=t.html;d.querySelectorAll('pre').forEach(pre=>add(pre.textContent,tab,'#'+tab,t.title));});});
+  // SQL group: CellCLI lines like "SELECT" inside cellcli context are fine; tidy label ordering
+  let total=0;const out=TOOLS.map(([k])=>{const g=groups[k];if(!g.items.length)return '';total+=g.items.length;
+    return `<details open class="cmdg" id="cmd-${k}"><summary><span>${esc(g.label)}</span><span class="cnt">${g.items.length}</span><button class="btn cp" data-g="${k}">Copy all</button></summary><div class="cmdl">${g.items.map(it=>`<div class="cmd"><pre>${it.cap?`<i>${esc(it.cap)}</i>\n`:''}${esc(it.cmd)}</pre><a href="${it.linkHash}" title="${esc(it.linkLabel)}">${esc(TABLABEL[it.tab]||it.tab)} ↗</a></div>`).join('')}</div></details>`;}).join('');
+  const toc=TOOLS.map(([k])=>groups[k].items.length?`<a href="#cmds" data-g="${k}" class="pill">${esc(groups[k].label.split(' — ')[0])} · ${groups[k].items.length}</a>`:'').join('');
+  setTimeout(()=>{document.querySelectorAll('.cmdg .cp').forEach(b=>b.onclick=ev=>{ev.preventDefault();ev.stopPropagation();const g=groups[b.dataset.g];const txt=g.items.map(it=>(it.cap?it.cap+'\n':'')+it.cmd).join('\n');try{navigator.clipboard.writeText(txt).then(()=>{b.textContent='Copied';setTimeout(()=>b.textContent='Copy all',1200);});}catch(e){b.textContent='Select & copy';}});
+    document.querySelectorAll('.cmdtoc a').forEach(a=>a.onclick=ev=>{ev.preventDefault();const d=document.getElementById('cmd-'+a.dataset.g);if(d){d.open=true;d.scrollIntoView({behavior:'smooth',block:'start'});}});},0);
+  return `<p class="lede">${total} commands and queries collected from every "Check it" and "See it" block on this site, grouped by tool. Each line links back to the part or theory section it came from; hostnames, SQL IDs and values are placeholders.</p><div class="cmdtoc state">${toc}</div>${out}`;}
+TABS.cmds.build=buildCmds;
 
 const [h0,p0]=readHash();go(TABS[h0]?h0:'overview');if(p0&&partById(p0))pin(p0);
 window.addEventListener('hashchange',()=>{try{const [t,pp]=readHash();if(TABS[t]&&t!==cur)go(t);if(pp&&partById(pp)&&stage.pinned!==pp)pin(pp);}catch(e){}});
